@@ -1,0 +1,3276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20191020 19:46:15.567" rpa="false">
+<suite id="s1" name="API.test" source="D:\Dat\Kolekto.Huur.AutoTest\robot\suites\API.test">
+<suite id="s1-s1" name="GetDossierList" source="D:\Dat\Kolekto.Huur.AutoTest\robot\suites\API.test\GetDossierList.robot">
+<kw name="Setup Activities Test Suite" library="GetDossierList.resource" type="setup">
+<kw name="Login and change language" library="kolekto">
+<kw name="Login Kolekto App" library="kolekto">
+<arguments>
+<arg>username=${ValidUser}</arg>
+<arg>pass=${KolektoPassword}</arg>
+</arguments>
+<kw name="Open Kolekto App With Maximize" library="kolekto">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${RootURL}</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:15.962" level="INFO">Opening browser 'chrome' to base url 'https://kolekto-huur-integration.azurewebsites.net/'.</msg>
+<status status="PASS" starttime="20191020 19:46:15.962" endtime="20191020 19:46:25.118"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20191020 19:46:25.119" endtime="20191020 19:46:29.241"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:15.962" endtime="20191020 19:46:29.241"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:29.241" endtime="20191020 19:46:29.243"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=loginfmt</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:29.243" level="INFO">Typing text 'auto.sp.admin@kolekto.nl' into text field 'name=loginfmt'.</msg>
+<status status="PASS" starttime="20191020 19:46:29.243" endtime="20191020 19:46:29.395"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=idSIButton9</arg>
+</arguments>
+<msg timestamp="20191020 19:46:29.395" level="INFO">Clicking button 'id=idSIButton9'.</msg>
+<status status="PASS" starttime="20191020 19:46:29.395" endtime="20191020 19:46:29.472"></status>
+</kw>
+<kw name="Wait For Input Password" library="kolekto">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>name=passwd</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:29.473" endtime="20191020 19:46:30.653"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>css:.lightbox-cover</arg>
+<arg>timeout=5</arg>
+<arg>error=None</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:30.654" endtime="20191020 19:46:30.924"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:29.472" endtime="20191020 19:46:30.924"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=passwd</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:30.924" level="INFO">Typing password into text field 'name=passwd'.</msg>
+<status status="PASS" starttime="20191020 19:46:30.924" endtime="20191020 19:46:31.010"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=idSIButton9</arg>
+</arguments>
+<msg timestamp="20191020 19:46:31.010" level="INFO">Clicking button 'id=idSIButton9'.</msg>
+<status status="PASS" starttime="20191020 19:46:31.010" endtime="20191020 19:46:31.950"></status>
+</kw>
+<kw name="Ignore Stay Signed in" library="kolekto">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=idBtn_Back</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:31.951" endtime="20191020 19:46:32.463"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=idBtn_Back</arg>
+</arguments>
+<msg timestamp="20191020 19:46:32.464" level="INFO">Clicking button 'id=idBtn_Back'.</msg>
+<status status="PASS" starttime="20191020 19:46:32.464" endtime="20191020 19:46:36.952"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:31.951" endtime="20191020 19:46:36.952"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:15.961" endtime="20191020 19:46:36.952"></status>
+</kw>
+<kw name="Change Language" library="kolekto">
+<kw name="Go to My Settings" library="kolekto">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Auto Admin SP</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:36.954" endtime="20191020 19:46:39.729"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:.appBar</arg>
+</arguments>
+<msg timestamp="20191020 19:46:39.729" level="INFO">Clicking element 'css:.appBar'.</msg>
+<status status="PASS" starttime="20191020 19:46:39.729" endtime="20191020 19:46:39.869"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:36.953" endtime="20191020 19:46:39.870"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'ms-Panel is-open ms-Panel--hasCloseButton user-settings-panel')]//div[@role="radiogroup"]/div/div[1]//label</arg>
+</arguments>
+<msg timestamp="20191020 19:46:39.870" level="INFO">Clicking element 'xpath://div[contains(@class,'ms-Panel is-open ms-Panel--hasCloseButton user-settings-panel')]//div[@role="radiogroup"]/div/div[1]//label'.</msg>
+<status status="PASS" starttime="20191020 19:46:39.870" endtime="20191020 19:46:39.967"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>css:.user-settings-from .form-buttons button.ms-Button--primary</arg>
+</arguments>
+<msg timestamp="20191020 19:46:39.968" level="INFO">Clicking button 'css:.user-settings-from .form-buttons button.ms-Button--primary'.</msg>
+<status status="PASS" starttime="20191020 19:46:39.968" endtime="20191020 19:46:40.067"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>New dossier</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:40.067" endtime="20191020 19:46:42.948"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:36.952" endtime="20191020 19:46:42.948"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:15.961" endtime="20191020 19:46:42.949"></status>
+</kw>
+<kw name="Setup Activities Test Suite Variables" library="GetDossierList.resource">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomStr}</var>
+</assign>
+<msg timestamp="20191020 19:46:42.949" level="INFO">${randomStr} = 75033091</msg>
+<status status="PASS" starttime="20191020 19:46:42.949" endtime="20191020 19:46:42.949"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{randomStrList}</arg>
+<arg>${randomStr}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:42.951" level="INFO">@{randomStrList} = [ 75033091 ]</msg>
+<status status="PASS" starttime="20191020 19:46:42.949" endtime="20191020 19:46:42.952"></status>
+</kw>
+<kw name="Get Cookies" library="SeleniumLibrary">
+<doc>Returns all cookies of the current page.</doc>
+<assign>
+<var>${cookie}</var>
+</assign>
+<msg timestamp="20191020 19:46:42.960" level="INFO">${cookie} = .AspNetCore.Culture=c%3Den-US%7Cuic%3Den-US; ai_session=dKyU4|1571575596945|1571575601363.54; ai_user=FCYaD|2019-10-20T12:46:34.535Z; .AspNetCore.Cookies=CfDJ8J0hKIQmOfFIg7SmchE0APhokTRQEq9fX4gnV9Aam1...</msg>
+<status status="PASS" starttime="20191020 19:46:42.952" endtime="20191020 19:46:42.960"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Header_Cookie}</arg>
+<arg>${cookie}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:42.961" level="INFO">${Header_Cookie} = .AspNetCore.Culture=c%3Den-US%7Cuic%3Den-US; ai_session=dKyU4|1571575596945|1571575601363.54; ai_user=FCYaD|2019-10-20T12:46:34.535Z; .AspNetCore.Cookies=CfDJ8J0hKIQmOfFIg7SmchE0APhokTRQEq9fX4gnV9Aam1...</msg>
+<status status="PASS" starttime="20191020 19:46:42.960" endtime="20191020 19:46:42.962"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:42.949" endtime="20191020 19:46:42.962"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:15.961" endtime="20191020 19:46:42.962"></status>
+</kw>
+<test id="s1-s1-t1" name="Get Detail Of Dossier">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>mysession</arg>
+<arg>${RootURL}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:42.963" level="INFO">Creating Session using : alias=mysession, url=https://kolekto-huur-integration.azurewebsites.net/, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20191020 19:46:42.962" endtime="20191020 19:46:42.963"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Cookie=${Header_Cookie}</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20191020 19:46:42.964" level="INFO">${headers} = {'Cookie': '.AspNetCore.Culture=c%3Den-US%7Cuic%3Den-US; ai_session=dKyU4|1571575596945|1571575601363.54; ai_user=FCYaD|2019-10-20T12:46:34.535Z; .AspNetCore.Cookies=CfDJ8J0hKIQmOfFIg7SmchE0APhokTRQEq...</msg>
+<status status="PASS" starttime="20191020 19:46:42.963" endtime="20191020 19:46:42.964"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mysession</arg>
+<arg>api/dossiers/0276dae3-7274-41ea-8f0e-e3d866b507f1</arg>
+<arg>headers=${headers}</arg>
+</arguments>
+<assign>
+<var>${respond}</var>
+</assign>
+<msg timestamp="20191020 19:46:44.407" level="INFO">Get Request using : alias=mysession, uri=api/dossiers/0276dae3-7274-41ea-8f0e-e3d866b507f1, headers={'Cookie': '.AspNetCore.Culture=c%3Den-US%7Cuic%3Den-US; ai_session=dKyU4|1571575596945|1571575601363.54; ai_user=FCYaD|2019-10-20T12:46:34.535Z; .AspNetCore.Cookies=CfDJ8J0hKIQmOfFIg7SmchE0APhokTRQEq9fX4gnV9Aam1qYVJKm37LkGt_e_5DCidw8cyV2E0ByAw9ZXYyOTyNTvGGcD49DoQvuGagvcoy7y2sl6zQt1kU3DZD9SahKYh2SCZcqECMvGAjVP0D57z4GfCJ6Dn0DppcVVMbD55ZsfyOBuSry3LmchJGkGolJ-DexSAJwh2VRFhVqmf7KrDUBSq6xDYMfbAfz681PvAht42SvERYX4tpYLimqfwKSDFAVkjkdFgtgbfhqiBukvS_uQ6fozyfJIa_Xuvv1vzJvHkf3lrPHFaJ4oC1po3wyKNnDj9cnPuweqaxQkMwCwP0AQExojwsnJjUzHizJwEVRGa1k3xegDhEl1vQa2P9VoP4g_D99Uuvz7xoAmn05HONtQnOM8p4VVcSLCD7UGotyfKMyympQecMdEOxSGw_s0aESpNAx8eNaxcLGWFskJHUPBJ0vOTMZsenqT86HhI4x0CYr_AgZG6mdwzOaFTCZKd7dRMZyfsQ80OKhD4AuGsTl4YCii8ce14qidte-7a3j_dCD_WRT9pb863IkN3wnLQlKNnSrcx0O3Tww1RaJXCopyg5Zj9tWCoKnCs_FsWmf0JOKPHCXcTU61f9oUu6Pms32vsycvRzGR2hiKU4-th5O1-6UfD4RdyW1uHmlh0tp2xUV-gGQnnyxsfSo3eWWM2TDa-VOH1dFIGJ3aIXBOKDMnWBrzy8bU8tlhDAq_mi-2aQPQN8ip3jK4_mhVwfULzIXe1CEJr_KP8GaU-uA8LvTy99L7OmAuJ5ZKb_YKcsXh-mZ1ykZBOhX94oA1et9CXMwZtg00pXBePgyMWoJIDwmkzTs_a3sSBbdo_z4-tUKeHkDf_AzfzbdCs5ZxY30jVYg8oRs99D5bo2R7tTujwjEiCQRayfYhayjk92_mro2BpiZP5bnwGK4G74jmRLItMmkBY8pIc6ZgZeXXHbwJEfS9kCcA0KjD5YIs3cDcGI0GOUIihmCUEDhEvV9HAN1ycMXKdcmoyzjaM5L5sxsmbtaBxQJjbNdj2yLVLPOVlDIdrw-vc65zsb7X6dKf1wmDBG7f7dBRt--lf7HThB8FTn2nC8wO-gn8fwXjTeupAOYn-BKGTpN9vphuke_7t9vHPSxyQoBI4FQUbGHomcU-0154cjldwFznVOK8sDS053X7dCWL_UqymYrT4Vcil3WIlkiQgEvbvhRberXPxUgNzfdIE-Bh81_0I4-HuzgelzKuMWsH2GynjPrxouUowd-_g8rhHQIswP1sqZxqxIjDV87W7PMBTSHOs2RXPHbbhlRV6rO9Me3WopaAewy2LUg9u8DO1QHgP_qP4MqX2FeCBPVpHCs75AMOGL2CZ_r8-bMmtjIyYdfWsU0T-dJmyxVoC3qE_jeTOVBS3okSaiZNNNOXG3YdCUVQtOWOIT704q0Iw_6vNXNqSOaU6SJDgNg5XgfkE7JgkQddpFOQd2GBxgcgktk5J9QJywIeO3WpQVyImj1OZmOr-2XNHOzydlSA4EVludVsKWSO_q9Ddf-a8lQtZv6wHK7pJIVsyFjddGZ48KlCmz55wGI3MNjGwAM4eWufnaXHX_s4rROeD-f7-l8PP_5JM2-n7BMl1B2X7_jgxnkrpHbUKQ6v9YxuhEpJNcE2sYdKjCNrNqN8YXlGgUASZrQEZUz7GY9cGoc7HFxIx8P7N7CvleN2-yqLwHiv9ahhY0cb8UH78IvrRXTRDml7Wc6CudEMhZNFTBcNe--znLBDvJn007pqcF1cAbDXD_wLoC9Ih1OdUknhsT6xyzMYZdBAyDv_ymg4npfpCz_8aPp6YyqkdHNDdMn-6BDG4uUKAy_QHBUJuuDp19YoUREodugRXp8q-aYTKVf2qnuVqoFqQ3DK23UQ3Tbce-szykzPmh3GASwm2S-swin08VPzxapUP32vBXawu6PqvACh4wP85YXqUt7cNXFLK7vI2c94WpzSPuWQA6EHlNLqQbQP96xZGXTRumWWKBnNYp9tmUo4wIASBzoFWgvZv8pwhqLKQ5Ugjld1S2UZjtNXiQOSqbvynbfLx5O4QlTKUsjVwtxHkuNBChU7QkW7HYxL_LYuxMksibLGu6wYX0SVeE-Yw-GAasDyewjYPQmtUDdcMvIvrE8PKQyQs0sUzyTQlz5cOS9DSLu8bagJL9yoKxPlhUoYhVkLMNIF673lTiVS0CG7lMpI6NrmeSjfBXRl9XomRnyV5pmeWiGtXBpKIwLAdI27q-bdbGjgbnBb3L4EmbH3gCt6-D07ilmxmwQb8ZOIUOTgoP_OlqrVCcaEXqJr-tFyEfmJ8Fh3X75Uwcb6nRN6IfrsKWSMYL_D5Z6-vYeGOHr5tMqiBBxD48dso7tXK2A4HBHhLRRnhLxH-5NALqmv0f9EshS6Z_x668mXNUcF4gNYSOXG7ChzEWdRRg1vSuzSm3lXcpr3ynwv0qC5vCQLb2lrxQ4WY3W3oM1pnDFcxgLLP0yGOdMZbxp_VMmmHGwgerNIT0FchigY_9GgtXcR0rpPmc2fCf9gXIC6u0-6_eq8pTQ_pGrl5HpkPxk6-raaH6dDOADK60cGH4jiyPTxEu22caLxBL3x55qyHcuK8AV4kw8ZL-oqzRTg_3qggtLUcCSEPbpCp2s472QNp1moamCuGe0miaOGTWahZamU2k-RgctxoxJrWMCQI8ltCLmpOeP8s8w7nlakFFdAJ-78zLltfctXG3ZCenRMZe_1bWVtOXKNfRPq-kt902eHxauBfnH1MKgeAmcwBbHPgnmMqLRRLOrZWE6iUsGwewjUpD84_9Wfjnci-v51mrM6Rq0sIgAQUt58vu2kkgB1HQDPjPGu7BseqM0qw7iVWm8K7mDWSEv8DEyMYnrTiGzXb_eB9591qeBXH985O0XQixneyM3uKLLfRI2k0-2P6_JB8T8U_A2YsyPOYy4cVu-TBJywiUX3L28Uy0A5EMjXHlnfQmPkumgf3K6KhTeGYWvxLea9eGLnqQY5Y0vz5VEqloB2FnfRZzpdPo2e8fz01BAGOslDhEJSg61jjDHelkIqKTUeOyjiwUf4_PgiG25rxo9-mZyH26FSta7A7optbA5SBo3QJ0kBLmhKywJENydfckUeyFa_cTh9WVCSRFTzM-AlRP-EniAjOJvE-Msr8_qY2QhDa8B5aV_CCsPhJ7DsCc5MT1NmgxvZT2vzR7tQTpT9q2f6_mRxXKe2KJR9b1VtJWJ8CVxi6OuhxW_XE2kz8rXAwgV72XXqL9b8wY67oK1juZb1PfcM982gWzpsYXx7-7PgCb4IG_QSTTNi_OxKLlzW4BqSbGR-KBqQqmiYhhNKAJh8Gt_dY4JoQ3i6te2LfjRbH6OmlN2PRDUF5i9CNJRaW13_Nmgrten907Pi9XTZhGN4h4luMQQqI0HUurzHHcwa02hRi5pZjeFZfHnppC3V7jjpx6Yu-aKoKk3xAZXUx4IJE_N8dO_SaEt_DRfHTOK0SGrEhlzQ6RxFOg16A'} json=None</msg>
+<msg timestamp="20191020 19:46:44.407" level="INFO">C:\Python\lib\site-packages\urllib3\connectionpool.py:851: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)</msg>
+<msg timestamp="20191020 19:46:44.408" level="INFO">${respond} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20191020 19:46:42.964" endtime="20191020 19:46:44.408"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${respond.status_code}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:44.409" level="INFO">200</msg>
+<status status="PASS" starttime="20191020 19:46:44.409" endtime="20191020 19:46:44.409"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${respond.content}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:44.412" level="INFO">{"error":false,"messages":[],"data":{"id":"0276dae3-7274-41ea-8f0e-e3d866b507f1","title":"De Nessermolen 44  1188 JB Amstelveen","reference":"1805240100","activities":[{"id":"64327b1c-a9ce-4ccd-8640-bf7bb104d222","title":"DM auto email3","description":"","notes":null,"link":null,"type":5,"createdAt":"2018-05-24T08:45:02.7480737+00:00","createdBy":"linh.mai@kolekto.nl","modifiedBy":null,"modifiedAt":null,"direction":1,"recipients":[],"activityDate":"2018-05-24T08:45:02.7168031+00:00","metadata":"{\"id\":\"69366a67-8637-4720-bb56-6823a0e35c3c\",\"actionId\":\"9949cf2f-0f93-4a8c-8db6-8af97c10a21f\",\"sqlAutoActionId\":\"55612ec5-8c03-444c-71ab-08d5c1517adc\",\"template\":\"/sites/lmorgdo4/EmailTemplates/24012018_111004353.docx\",\"status\":2,\"executedDate\":\"2018-05-24T08:45:02.7168031+00:00\",\"description\":null,\"errorCode\":\"8d61d6a3-628f-468a-b26e-6daf322f8b2e\",\"actionType\":0,\"failedInfo\":3}","status":0,"createdByOrganization":"00000000-0000-0000-0000-000000000000","isInternal":false},{"id":"c769fd30-690a-46d6-8016-864f509277de","title":"test template","description":"test template","notes":"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/ESEqvD3Ft5NMmHpAFpitzLMBGFX9z2HDIlra3IF9htEF9g","link":"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/EcNjmYj-rFdPsKv1Vb0X010BH9hw1LYD_mwqlqs1A4khxQ","type":4,"createdAt":"2018-05-24T08:45:02.3105494+00:00","createdBy":"linh.mai@kolekto.nl","modifiedBy":null,"modifiedAt":null,"direction":1,"recipients":[],"activityDate":"2018-05-24T08:44:29.754+00:00","metadata":"{\"letterContent\":{\"name\":\"test template\",\"contentLocation\":\"https://kolekto.sharepoint.com/sites/lmorgdo4/DossierDocuments/1805240100/test template_24052018_084338560.docx?d=w889963c3acfe4f57b0abf555bd17d35d\",\"previewImageLocation\":\"https://kolekto.sharepoint.com/sites/lmorgdo4/PreviewImages/1805240100/test template_24052018_084404606.png\",\"previewAnonymousLink\":\"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/ESEqvD3Ft5NMmHpAFpitzLMBGFX9z2HDIlra3IF9htEF9g\",\"contentAnonymousLink\":\"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/EcNjmYj-rFdPsKv1Vb0X010BH9hw1LYD_mwqlqs1A4khxQ\"}}","status":0,"createdByOrganization":"00000000-0000-0000-0000-000000000000","isInternal":false},{"id":"d581655f-c8ca-4832-ac29-dd040ee12024","title":"LM Org DO 4","description":"LM Org DO 4","notes":"Evaluation Only. Created with Aspose.Words. Copyright 2003-2017 Aspose Pty Ltd.\r\nTest calculated properties\r\n- Property name : \r\n- Property street : De Nessermolen\r\n- Property number : 44\r\n- Property city : Amstelveen\r\n- Property number addition : \r\n- Owner company name : LM Org DO 4\r\n- Owner email : linh.mai@kolekto.nl\r\n- Owner street : Verheullaan\r\n- Dossier reference : 1805240100\r\n- Pay to service : \xe2\x82\xac0,00\r\n- Rent \xe2\x80\x93 Tax : \xe2\x82\xac0,00\r\n- Tatal amount value : \xe2\x82\xac0,00\r\n- Base amount : \xe2\x82\xac0,00\r\n- Test dot : \xe2\x82\xac0,00\r\n- Hoofdsom + incassokst : \xe2\x82\xac0,00\r\n\r\n\r\n","link":null,"type":6,"createdAt":"2018-05-24T08:40:07.8854784+00:00","createdBy":"System Admin","modifiedBy":null,"modifiedAt":null,"direction":1,"recipients":[],"activityDate":"2018-05-24T08:40:07.8854784+00:00","metadata":"{\"id\":\"3c382161-4127-4a42-8fc5-f4c819046fc4\",\"href\":\"https://rest.messagebird.com/messages/65f174d40b7e407e8c3a92f662fe2061\",\"direction\":\"mt\",\"type\":\"sms\",\"originator\":\"LM Org DO 4\",\"body\":\"Evaluation Only. Created with Aspose.Words. Copyright 2003-2017 Aspose Pty Ltd.\\r\\nTest calculated properties\\r\\n- Property name : \\r\\n- Property street : De Nessermolen\\r\\n- Property number : 44\\r\\n- Property city : Amstelveen\\r\\n- Property number addition : \\r\\n- Owner company name : LM Org DO 4\\r\\n- Owner email : linh.mai@kolekto.nl\\r\\n- Owner street : Verheullaan\\r\\n- Dossier reference : 1805240100\\r\\n- Pay to service : \xe2\x82\xac0,00\\r\\n- Rent  Tax : \xe2\x82\xac0,00\\r\\n- Tatal amount value : \xe2\x82\xac0,00\\r\\n- Base amount : \xe2\x82\xac0,00\\r\\n- Test dot : \xe2\x82\xac0,00\\r\\n- Hoofdsom + incassokst : \xe2\x82\xac0,00\",\"reference\":null,\"validity\":null,\"gateway\":10,\"typeDetails\":{},\"datacoding\":\"plain\",\"mclass\":1,\"scheduledDatetime\":null,\"createdDatetime\":\"2018-05-24T08:40:07+00:00\",\"recipients\":{\"totalCount\":1,\"totalSentCount\":1,\"totalDeliveredCount\":0,\"totalDeliveryFailedCount\":0,\"items\":[{\"recipient\":84932733681,\"status\":\"sent\",\"statusDatetime\":\"2018-05-24T08:40:07+00:00\"}]},\"actionId\":\"6e078741-42ce-48bb-ab30-148dce34bd26\",\"sqlAutoActionId\":\"fb9ec445-5860-4508-71aa-08d5c1517adc\",\"template\":\"/sites/lmorgdo4/TextMessageTemplates/17052018_042659953.docx\",\"status\":1,\"executedDate\":\"2018-05-24T08:36:44.0572329+00:00\",\"description\":null,\"errorCode\":null,\"actionType\":2,\"failedInfo\":0}","status":0,"createdByOrganization":"00000000-0000-0000-0000-000000000000","isInternal":false},{"id":"5e64df8d-ccbf-4a76-89d9-2ac9c901536d","title":"test template","description":"test template","notes":"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/EXBqb-iPx9VFsYEToKGMMJgBKyZ6o_JU00tCN4K3Um3hjw","link":"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/ERf40jsbtbNPnkYQeXTY-KYBiSwJqm33HFBssV54zveFYA","type":4,"createdAt":"2018-05-24T08:36:43.6805981+00:00","createdBy":"linh.mai@kolekto.nl","modifiedBy":null,"modifiedAt":null,"direction":1,"recipients":[],"activityDate":"2018-05-24T08:36:35.455+00:00","metadata":"{\"letterContent\":{\"name\":\"test template\",\"contentLocation\":\"https://kolekto.sharepoint.com/sites/lmorgdo4/DossierDocuments/1805240100/test template_24052018_083545626.docx?d=w3bd2f817b51b4fb39e46107974d8f8a6\",\"previewImageLocation\":\"https://kolekto.sharepoint.com/sites/lmorgdo4/PreviewImages/1805240100/test template_24052018_083622515.png\",\"previewAnonymousLink\":\"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/EXBqb-iPx9VFsYEToKGMMJgBKyZ6o_JU00tCN4K3Um3hjw\",\"contentAnonymousLink\":\"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/ERf40jsbtbNPnkYQeXTY-KYBiSwJqm33HFBssV54zveFYA\"}}","status":0,"createdByOrganization":"00000000-0000-0000-0000-000000000000","isInternal":false}],"status":{"phase":0,"status":"4c46e185-594b-4829-0adf-08d535607307","note":null,"statusDate":"2018-05-24T08:45:02.5137197Z","scheduleDate":"2018-05-25T08:45:02.5137197Z","modifiedAt":"2018-05-24T08:45:03.0918144+00:00","modifiedBy":"linh.mai@kolekto.nl","subStatus":null},"claimInfo":null,"settlements":[],"huurObject":{"id":"8df1cb60-e193-4b70-86fb-0166407d7d09","name":"","reference":"","address":{"street":"De Nessermolen","number":"44","numberAddition":null,"postalCode":"1188 JB","city":"Amstelveen","stateProvince":null,"country":null,"isPOBox":false},"lat":null,"lon":null},"huurOvereenkomst":null,"tenants":[],"landlords":[{"id":"c644d585-0e67-46ed-b948-6e321342bd3b","roles":"owner","principal":false,"person":{"id":"7ed74946-fcd4-4a6e-b323-8788c95941cc","fullName":null,"firstName":null,"middleName":null,"lastName":null,"initials":null,"birthDay":null,"sex":null,"companyName":"LM Org DO 4","contactPerson":null,"vatNumber":null,"registeredOffice":null,"type":0,"salutation":null,"reference":null,"mailAddress":{"street":"Verheullaan","number":"64","numberAddition":null,"postalCode":"2661 SP","city":"Bergschenhoek","stateProvince":null,"country":null,"isPOBox":false},"communicationInfo":{"phone":null,"mobilePhone":"+84948018747","fax":null,"email":"linh.mai@kolekto.nl","internet":null,"twitter":null},"officialRegistrationNumber":null,"kvk":"12345","debtorNumber":null,"bankInfo":null,"insolvent":null,"insolventDate":null,"deceased":null,"deceasedDate":null,"insolvencyNote":null},"beneficiary":false,"copiedContactId":null,"organizationId":null,"legalForm":null,"tradeName":null}],"createdAt":"2018-05-24T08:34:57.6246728+00:00","createdBy":"linh.mai@kolekto.nl","modifiedAt":"2018-05-24T08:45:03.0918144+00:00","modifiedBy":"linh.mai@kolekto.nl","organization":{"organizationId":"D0002","name":"LM Org DO","type":"Data Owner","tenantId":"2fe10c48-560c-4295-82cb-df1063048bcd","dataCollectionName":"LM Org DO 4","dataCollectionUserName":"linh.mai.admin@kolekto.nl","docStorageUrl":"https://kolekto.sharepoint.com/sites/lmorgdo4","createdAt":"2017-11-21T06:49:30.7514536+00:00","createdBy":"linh.mai.admin@kolekto.nl","modifiedAt":"2019-10-16T10:09:52.757789+00:00","modifiedBy":"long.nguyen@kolekto.nl","role":"client","kvk":"12345","city":"Amstelveen","street":"De Nessermolen","postalCode":"1188 JB","numberAddition":"23","number":"26","mobilePhone":"+84948018747","phone":"1234564","email":"linh.mai@kolekto.nl","internalName":null,"vcaBankAccount":"PL56565656565656","vcaBankAccountName":"Credicare Care SI","enableVirtualCA":true,"logoUrl":"https://kolektohuurintegration.blob.core.windows.net/kolekto-images/logo/7e7b5e59-3d1f-4f93-902e-e18b9fe5f800.png","outboundMailbox":"development@kolekto.nl","enableOutboundMailbox":true,"bankAccount":"NL34555555556666","bankAccountName":"Kolekto","storageContainerName":"lmorgdo4","smsName":"SMSname1234","vcasmsName":"VCA1234","organizationBankAccounts":[],"id":"f8636618-4f27-4780-97ed-08d52fdae3ad"},"organizationId":"f8636618-4f27-4780-97ed-08d52fdae3ad","dossierTypeId":"a695965b-e93e-473c-ef2b-08d5b974fb59","flow":{"id":"0745a1a8-b438-4753-8f1b-695b07f56573","name":"0","description":null,"actions":[{"id":"9e8b83ae-9319-474b-a63b-9fcac6a48718","name":"DM 1","description":"","isAutomatic":false,"systemAction":1,"templateCategory":"243577d8-3bf6-4032-0f80-08d530b6505a","templateInfoId":null,"attachmentTemplateInfoId":null,"scheduleDelay":0,"resultStatus":"b7fdd0ea-bb25-4ef9-b4d9-08d5332105ca","order":0,"handler":null,"recipientGroups":["owner"],"additionalRecipients":[],"from":null,"scheduleDate":null,"executedDate":null,"actionTypeId":null},{"id":"6e078741-42ce-48bb-ab30-148dce34bd26","name":"DM_SMS auto1","description":"","isAutomatic":true,"systemAction":2,"templateCategory":"243577d8-3bf6-4032-0f80-08d530b6505a","templateInfoId":null,"attachmentTemplateInfoId":null,"scheduleDelay":0,"resultStatus":"","order":1,"handler":{"handlerUserId":"41bd288a-c27f-4e57-789c-08d54c1871aa","handlingOrganizationId":"b2abe5f4-279b-44c1-ac9d-08d59b894155","handlerName":null,"handlingOrganizationName":null,"handlingOrgLogoUrl":null,"isVirtualHandler":false},"recipientGroups":[],"additionalRecipients":["+84932733681"],"from":"LM Org DO 4","scheduleDate":null,"executedDate":null,"actionTypeId":null},{"id":"47fac343-2c0b-4868-a624-897ef7518f2c","name":"DM manual 2_SMS","description":"","isAutomatic":false,"systemAction":1,"templateCategory":"243577d8-3bf6-4032-0f80-08d530b6505a","templateInfoId":null,"attachmentTemplateInfoId":null,"scheduleDelay":1,"resultStatus":"4c46e185-594b-4829-0adf-08d535607307","order":3,"handler":{"handlerUserId":"ffcecbfb-48d3-44bb-e5fa-08d55c9c8613","handlingOrganizationId":"f8636618-4f27-4780-97ed-08d52fdae3ad","handlerName":null,"handlingOrganizationName":null,"handlingOrgLogoUrl":null,"isVirtualHandler":false},"recipientGroups":["tenant"],"additionalRecipients":[],"from":null,"scheduleDate":null,"executedDate":null,"actionTypeId":null},{"id":"9949cf2f-0f93-4a8c-8db6-8af97c10a21f","name":"DM auto email3","description":"","isAutomatic":true,"systemAction":0,"templateCategory":"243577d8-3bf6-4032-0f80-08d530b6505a","templateInfoId":null,"attachmentTemplateInfoId":null,"scheduleDelay":0,"resultStatus":"","order":4,"handler":null,"recipientGroups":[],"additionalRecipients":["linh.mai@kolekto.nl"],"from":"development@kolekto.nl","scheduleDate":null,"executedDate":null,"actionTypeId":null}],"createdDate":"2018-05-14T08:30:42.8085526+00:00","createdBy":"linh.mai.admin@kolekto.nl","modifiedDate":"2018-05-16T04:00:09.5328789+00:00","modifiedBy":"linh.mai.admin@kolekto.nl","dossierTypeId":"a695965b-e93e-473c-ef2b-08d5b974fb59","inProgress":false,"nextAction":null,"organizationId":"00000000-0000-0000-0000-000000000000","docType":"Flow"},"bookings":[],"paymentLinks":[],"handler":{"handlerUserId":"ffcecbfb-48d3-44bb-e5fa-08d55c9c8613","handlingOrganizationId":"f8636618-4f27-4780-97ed-08d52fdae3ad","handlerName":"Linh Mai 3","handlingOrganizationName":"LM Org DO","handlingOrgLogoUrl":"https://kolektohuurintegration.blob.core.windows.net/kolekto-images/logo/7e7b5e59-3d1f-4f93-902e-e18b9fe5f800.png","isVirtualHandler":false},"dossierStatus":0,"externalReference":null,"court":null,"courtLocation":null,"parties":[{"id":"c644d585-0e67-46ed-b948-6e321342bd3b","roles":"claimant","principal":false,"person":{"id":"7ed74946-fcd4-4a6e-b323-8788c95941cc","fullName":null,"firstName":null,"middleName":null,"lastName":null,"initials":null,"birthDay":null,"sex":null,"companyName":"LM Org DO 4","contactPerson":null,"vatNumber":null,"registeredOffice":null,"type":0,"salutation":null,"reference":null,"mailAddress":{"street":"Verheullaan","number":"64","numberAddition":null,"postalCode":"2661 SP","city":"Bergschenhoek","stateProvince":null,"country":null,"isPOBox":false},"communicationInfo":{"phone":null,"mobilePhone":"+84948018747","fax":null,"email":"linh.mai@kolekto.nl","internet":null,"twitter":null},"officialRegistrationNumber":null,"kvk":"12345","debtorNumber":null,"bankInfo":null,"insolvent":null,"insolventDate":null,"deceased":null,"deceasedDate":null,"insolvencyNote":null},"beneficiary":false,"copiedContactId":null,"organizationId":null,"legalForm":null,"tradeName":null}],"filterText":"de nessermolen 44  1188 jb amstelveen 1805240100  ","orderCreateDate":1527150897,"orderScheduledDate":1527237902,"dossierNotifications":[],"debtor":null,"debtorName":null,"debtorBalance":0.0,"docType":"Dossier"}}</msg>
+<status status="PASS" starttime="20191020 19:46:44.409" endtime="20191020 19:46:44.413"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${respond.headers}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:44.414" level="INFO">{'Transfer-Encoding': 'chunked', 'Content-Type': 'application/json; charset=utf-8', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Server': 'Kestrel', 'Request-Context': 'appId=cid-v1:cfe31e21-6fdf-4674-bfb6-24b02d49044f', 'X-Powered-By': 'ASP.NET', 'Date': 'Sun, 20 Oct 2019 12:46:44 GMT'}</msg>
+<status status="PASS" starttime="20191020 19:46:44.413" endtime="20191020 19:46:44.414"></status>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
+<arguments>
+<arg>${respond.content}</arg>
+</arguments>
+<assign>
+<var>${json_obj}</var>
+</assign>
+<msg timestamp="20191020 19:46:44.415" level="INFO">To JSON using : content={"error":false,"messages":[],"data":{"id":"0276dae3-7274-41ea-8f0e-e3d866b507f1","title":"De Nessermolen 44  1188 JB Amstelveen","reference":"1805240100","activities":[{"id":"64327b1c-a9ce-4ccd-8640-bf7bb104d222","title":"DM auto email3","description":"","notes":null,"link":null,"type":5,"createdAt":"2018-05-24T08:45:02.7480737+00:00","createdBy":"linh.mai@kolekto.nl","modifiedBy":null,"modifiedAt":null,"direction":1,"recipients":[],"activityDate":"2018-05-24T08:45:02.7168031+00:00","metadata":"{\"id\":\"69366a67-8637-4720-bb56-6823a0e35c3c\",\"actionId\":\"9949cf2f-0f93-4a8c-8db6-8af97c10a21f\",\"sqlAutoActionId\":\"55612ec5-8c03-444c-71ab-08d5c1517adc\",\"template\":\"/sites/lmorgdo4/EmailTemplates/24012018_111004353.docx\",\"status\":2,\"executedDate\":\"2018-05-24T08:45:02.7168031+00:00\",\"description\":null,\"errorCode\":\"8d61d6a3-628f-468a-b26e-6daf322f8b2e\",\"actionType\":0,\"failedInfo\":3}","status":0,"createdByOrganization":"00000000-0000-0000-0000-000000000000","isInternal":false},{"id":"c769fd30-690a-46d6-8016-864f509277de","title":"test template","description":"test template","notes":"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/ESEqvD3Ft5NMmHpAFpitzLMBGFX9z2HDIlra3IF9htEF9g","link":"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/EcNjmYj-rFdPsKv1Vb0X010BH9hw1LYD_mwqlqs1A4khxQ","type":4,"createdAt":"2018-05-24T08:45:02.3105494+00:00","createdBy":"linh.mai@kolekto.nl","modifiedBy":null,"modifiedAt":null,"direction":1,"recipients":[],"activityDate":"2018-05-24T08:44:29.754+00:00","metadata":"{\"letterContent\":{\"name\":\"test template\",\"contentLocation\":\"https://kolekto.sharepoint.com/sites/lmorgdo4/DossierDocuments/1805240100/test template_24052018_084338560.docx?d=w889963c3acfe4f57b0abf555bd17d35d\",\"previewImageLocation\":\"https://kolekto.sharepoint.com/sites/lmorgdo4/PreviewImages/1805240100/test template_24052018_084404606.png\",\"previewAnonymousLink\":\"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/ESEqvD3Ft5NMmHpAFpitzLMBGFX9z2HDIlra3IF9htEF9g\",\"contentAnonymousLink\":\"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/EcNjmYj-rFdPsKv1Vb0X010BH9hw1LYD_mwqlqs1A4khxQ\"}}","status":0,"createdByOrganization":"00000000-0000-0000-0000-000000000000","isInternal":false},{"id":"d581655f-c8ca-4832-ac29-dd040ee12024","title":"LM Org DO 4","description":"LM Org DO 4","notes":"Evaluation Only. Created with Aspose.Words. Copyright 2003-2017 Aspose Pty Ltd.\r\nTest calculated properties\r\n- Property name : \r\n- Property street : De Nessermolen\r\n- Property number : 44\r\n- Property city : Amstelveen\r\n- Property number addition : \r\n- Owner company name : LM Org DO 4\r\n- Owner email : linh.mai@kolekto.nl\r\n- Owner street : Verheullaan\r\n- Dossier reference : 1805240100\r\n- Pay to service : €0,00\r\n- Rent – Tax : €0,00\r\n- Tatal amount value : €0,00\r\n- Base amount : €0,00\r\n- Test dot : €0,00\r\n- Hoofdsom + incassokst : €0,00\r\n\r\n\r\n","link":null,"type":6,"createdAt":"2018-05-24T08:40:07.8854784+00:00","createdBy":"System Admin","modifiedBy":null,"modifiedAt":null,"direction":1,"recipients":[],"activityDate":"2018-05-24T08:40:07.8854784+00:00","metadata":"{\"id\":\"3c382161-4127-4a42-8fc5-f4c819046fc4\",\"href\":\"https://rest.messagebird.com/messages/65f174d40b7e407e8c3a92f662fe2061\",\"direction\":\"mt\",\"type\":\"sms\",\"originator\":\"LM Org DO 4\",\"body\":\"Evaluation Only. Created with Aspose.Words. Copyright 2003-2017 Aspose Pty Ltd.\\r\\nTest calculated properties\\r\\n- Property name : \\r\\n- Property street : De Nessermolen\\r\\n- Property number : 44\\r\\n- Property city : Amstelveen\\r\\n- Property number addition : \\r\\n- Owner company name : LM Org DO 4\\r\\n- Owner email : linh.mai@kolekto.nl\\r\\n- Owner street : Verheullaan\\r\\n- Dossier reference : 1805240100\\r\\n- Pay to service : €0,00\\r\\n- Rent  Tax : €0,00\\r\\n- Tatal amount value : €0,00\\r\\n- Base amount : €0,00\\r\\n- Test dot : €0,00\\r\\n- Hoofdsom + incassokst : €0,00\",\"reference\":null,\"validity\":null,\"gateway\":10,\"typeDetails\":{},\"datacoding\":\"plain\",\"mclass\":1,\"scheduledDatetime\":null,\"createdDatetime\":\"2018-05-24T08:40:07+00:00\",\"recipients\":{\"totalCount\":1,\"totalSentCount\":1,\"totalDeliveredCount\":0,\"totalDeliveryFailedCount\":0,\"items\":[{\"recipient\":84932733681,\"status\":\"sent\",\"statusDatetime\":\"2018-05-24T08:40:07+00:00\"}]},\"actionId\":\"6e078741-42ce-48bb-ab30-148dce34bd26\",\"sqlAutoActionId\":\"fb9ec445-5860-4508-71aa-08d5c1517adc\",\"template\":\"/sites/lmorgdo4/TextMessageTemplates/17052018_042659953.docx\",\"status\":1,\"executedDate\":\"2018-05-24T08:36:44.0572329+00:00\",\"description\":null,\"errorCode\":null,\"actionType\":2,\"failedInfo\":0}","status":0,"createdByOrganization":"00000000-0000-0000-0000-000000000000","isInternal":false},{"id":"5e64df8d-ccbf-4a76-89d9-2ac9c901536d","title":"test template","description":"test template","notes":"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/EXBqb-iPx9VFsYEToKGMMJgBKyZ6o_JU00tCN4K3Um3hjw","link":"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/ERf40jsbtbNPnkYQeXTY-KYBiSwJqm33HFBssV54zveFYA","type":4,"createdAt":"2018-05-24T08:36:43.6805981+00:00","createdBy":"linh.mai@kolekto.nl","modifiedBy":null,"modifiedAt":null,"direction":1,"recipients":[],"activityDate":"2018-05-24T08:36:35.455+00:00","metadata":"{\"letterContent\":{\"name\":\"test template\",\"contentLocation\":\"https://kolekto.sharepoint.com/sites/lmorgdo4/DossierDocuments/1805240100/test template_24052018_083545626.docx?d=w3bd2f817b51b4fb39e46107974d8f8a6\",\"previewImageLocation\":\"https://kolekto.sharepoint.com/sites/lmorgdo4/PreviewImages/1805240100/test template_24052018_083622515.png\",\"previewAnonymousLink\":\"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/EXBqb-iPx9VFsYEToKGMMJgBKyZ6o_JU00tCN4K3Um3hjw\",\"contentAnonymousLink\":\"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/ERf40jsbtbNPnkYQeXTY-KYBiSwJqm33HFBssV54zveFYA\"}}","status":0,"createdByOrganization":"00000000-0000-0000-0000-000000000000","isInternal":false}],"status":{"phase":0,"status":"4c46e185-594b-4829-0adf-08d535607307","note":null,"statusDate":"2018-05-24T08:45:02.5137197Z","scheduleDate":"2018-05-25T08:45:02.5137197Z","modifiedAt":"2018-05-24T08:45:03.0918144+00:00","modifiedBy":"linh.mai@kolekto.nl","subStatus":null},"claimInfo":null,"settlements":[],"huurObject":{"id":"8df1cb60-e193-4b70-86fb-0166407d7d09","name":"","reference":"","address":{"street":"De Nessermolen","number":"44","numberAddition":null,"postalCode":"1188 JB","city":"Amstelveen","stateProvince":null,"country":null,"isPOBox":false},"lat":null,"lon":null},"huurOvereenkomst":null,"tenants":[],"landlords":[{"id":"c644d585-0e67-46ed-b948-6e321342bd3b","roles":"owner","principal":false,"person":{"id":"7ed74946-fcd4-4a6e-b323-8788c95941cc","fullName":null,"firstName":null,"middleName":null,"lastName":null,"initials":null,"birthDay":null,"sex":null,"companyName":"LM Org DO 4","contactPerson":null,"vatNumber":null,"registeredOffice":null,"type":0,"salutation":null,"reference":null,"mailAddress":{"street":"Verheullaan","number":"64","numberAddition":null,"postalCode":"2661 SP","city":"Bergschenhoek","stateProvince":null,"country":null,"isPOBox":false},"communicationInfo":{"phone":null,"mobilePhone":"+84948018747","fax":null,"email":"linh.mai@kolekto.nl","internet":null,"twitter":null},"officialRegistrationNumber":null,"kvk":"12345","debtorNumber":null,"bankInfo":null,"insolvent":null,"insolventDate":null,"deceased":null,"deceasedDate":null,"insolvencyNote":null},"beneficiary":false,"copiedContactId":null,"organizationId":null,"legalForm":null,"tradeName":null}],"createdAt":"2018-05-24T08:34:57.6246728+00:00","createdBy":"linh.mai@kolekto.nl","modifiedAt":"2018-05-24T08:45:03.0918144+00:00","modifiedBy":"linh.mai@kolekto.nl","organization":{"organizationId":"D0002","name":"LM Org DO","type":"Data Owner","tenantId":"2fe10c48-560c-4295-82cb-df1063048bcd","dataCollectionName":"LM Org DO 4","dataCollectionUserName":"linh.mai.admin@kolekto.nl","docStorageUrl":"https://kolekto.sharepoint.com/sites/lmorgdo4","createdAt":"2017-11-21T06:49:30.7514536+00:00","createdBy":"linh.mai.admin@kolekto.nl","modifiedAt":"2019-10-16T10:09:52.757789+00:00","modifiedBy":"long.nguyen@kolekto.nl","role":"client","kvk":"12345","city":"Amstelveen","street":"De Nessermolen","postalCode":"1188 JB","numberAddition":"23","number":"26","mobilePhone":"+84948018747","phone":"1234564","email":"linh.mai@kolekto.nl","internalName":null,"vcaBankAccount":"PL56565656565656","vcaBankAccountName":"Credicare Care SI","enableVirtualCA":true,"logoUrl":"https://kolektohuurintegration.blob.core.windows.net/kolekto-images/logo/7e7b5e59-3d1f-4f93-902e-e18b9fe5f800.png","outboundMailbox":"development@kolekto.nl","enableOutboundMailbox":true,"bankAccount":"NL34555555556666","bankAccountName":"Kolekto","storageContainerName":"lmorgdo4","smsName":"SMSname1234","vcasmsName":"VCA1234","organizationBankAccounts":[],"id":"f8636618-4f27-4780-97ed-08d52fdae3ad"},"organizationId":"f8636618-4f27-4780-97ed-08d52fdae3ad","dossierTypeId":"a695965b-e93e-473c-ef2b-08d5b974fb59","flow":{"id":"0745a1a8-b438-4753-8f1b-695b07f56573","name":"0","description":null,"actions":[{"id":"9e8b83ae-9319-474b-a63b-9fcac6a48718","name":"DM 1","description":"","isAutomatic":false,"systemAction":1,"templateCategory":"243577d8-3bf6-4032-0f80-08d530b6505a","templateInfoId":null,"attachmentTemplateInfoId":null,"scheduleDelay":0,"resultStatus":"b7fdd0ea-bb25-4ef9-b4d9-08d5332105ca","order":0,"handler":null,"recipientGroups":["owner"],"additionalRecipients":[],"from":null,"scheduleDate":null,"executedDate":null,"actionTypeId":null},{"id":"6e078741-42ce-48bb-ab30-148dce34bd26","name":"DM_SMS auto1","description":"","isAutomatic":true,"systemAction":2,"templateCategory":"243577d8-3bf6-4032-0f80-08d530b6505a","templateInfoId":null,"attachmentTemplateInfoId":null,"scheduleDelay":0,"resultStatus":"","order":1,"handler":{"handlerUserId":"41bd288a-c27f-4e57-789c-08d54c1871aa","handlingOrganizationId":"b2abe5f4-279b-44c1-ac9d-08d59b894155","handlerName":null,"handlingOrganizationName":null,"handlingOrgLogoUrl":null,"isVirtualHandler":false},"recipientGroups":[],"additionalRecipients":["+84932733681"],"from":"LM Org DO 4","scheduleDate":null,"executedDate":null,"actionTypeId":null},{"id":"47fac343-2c0b-4868-a624-897ef7518f2c","name":"DM manual 2_SMS","description":"","isAutomatic":false,"systemAction":1,"templateCategory":"243577d8-3bf6-4032-0f80-08d530b6505a","templateInfoId":null,"attachmentTemplateInfoId":null,"scheduleDelay":1,"resultStatus":"4c46e185-594b-4829-0adf-08d535607307","order":3,"handler":{"handlerUserId":"ffcecbfb-48d3-44bb-e5fa-08d55c9c8613","handlingOrganizationId":"f8636618-4f27-4780-97ed-08d52fdae3ad","handlerName":null,"handlingOrganizationName":null,"handlingOrgLogoUrl":null,"isVirtualHandler":false},"recipientGroups":["tenant"],"additionalRecipients":[],"from":null,"scheduleDate":null,"executedDate":null,"actionTypeId":null},{"id":"9949cf2f-0f93-4a8c-8db6-8af97c10a21f","name":"DM auto email3","description":"","isAutomatic":true,"systemAction":0,"templateCategory":"243577d8-3bf6-4032-0f80-08d530b6505a","templateInfoId":null,"attachmentTemplateInfoId":null,"scheduleDelay":0,"resultStatus":"","order":4,"handler":null,"recipientGroups":[],"additionalRecipients":["linh.mai@kolekto.nl"],"from":"development@kolekto.nl","scheduleDate":null,"executedDate":null,"actionTypeId":null}],"createdDate":"2018-05-14T08:30:42.8085526+00:00","createdBy":"linh.mai.admin@kolekto.nl","modifiedDate":"2018-05-16T04:00:09.5328789+00:00","modifiedBy":"linh.mai.admin@kolekto.nl","dossierTypeId":"a695965b-e93e-473c-ef2b-08d5b974fb59","inProgress":false,"nextAction":null,"organizationId":"00000000-0000-0000-0000-000000000000","docType":"Flow"},"bookings":[],"paymentLinks":[],"handler":{"handlerUserId":"ffcecbfb-48d3-44bb-e5fa-08d55c9c8613","handlingOrganizationId":"f8636618-4f27-4780-97ed-08d52fdae3ad","handlerName":"Linh Mai 3","handlingOrganizationName":"LM Org DO","handlingOrgLogoUrl":"https://kolektohuurintegration.blob.core.windows.net/kolekto-images/logo/7e7b5e59-3d1f-4f93-902e-e18b9fe5f800.png","isVirtualHandler":false},"dossierStatus":0,"externalReference":null,"court":null,"courtLocation":null,"parties":[{"id":"c644d585-0e67-46ed-b948-6e321342bd3b","roles":"claimant","principal":false,"person":{"id":"7ed74946-fcd4-4a6e-b323-8788c95941cc","fullName":null,"firstName":null,"middleName":null,"lastName":null,"initials":null,"birthDay":null,"sex":null,"companyName":"LM Org DO 4","contactPerson":null,"vatNumber":null,"registeredOffice":null,"type":0,"salutation":null,"reference":null,"mailAddress":{"street":"Verheullaan","number":"64","numberAddition":null,"postalCode":"2661 SP","city":"Bergschenhoek","stateProvince":null,"country":null,"isPOBox":false},"communicationInfo":{"phone":null,"mobilePhone":"+84948018747","fax":null,"email":"linh.mai@kolekto.nl","internet":null,"twitter":null},"officialRegistrationNumber":null,"kvk":"12345","debtorNumber":null,"bankInfo":null,"insolvent":null,"insolventDate":null,"deceased":null,"deceasedDate":null,"insolvencyNote":null},"beneficiary":false,"copiedContactId":null,"organizationId":null,"legalForm":null,"tradeName":null}],"filterText":"de nessermolen 44  1188 jb amstelveen 1805240100  ","orderCreateDate":1527150897,"orderScheduledDate":1527237902,"dossierNotifications":[],"debtor":null,"debtorName":null,"debtorBalance":0.0,"docType":"Dossier"}} </msg>
+<msg timestamp="20191020 19:46:44.415" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20191020 19:46:44.415" level="INFO">${json_obj} = {'error': False, 'messages': [], 'data': {'id': '0276dae3-7274-41ea-8f0e-e3d866b507f1', 'title': 'De Nessermolen 44  1188 JB Amstelveen', 'reference': '1805240100', 'activities': [{'id': '64327b1c-a9c...</msg>
+<status status="PASS" starttime="20191020 19:46:44.414" endtime="20191020 19:46:44.415"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_obj}</arg>
+<arg>$.data</arg>
+</arguments>
+<assign>
+<var>${test}</var>
+</assign>
+<msg timestamp="20191020 19:46:44.445" level="INFO">${test} = [{'id': '0276dae3-7274-41ea-8f0e-e3d866b507f1', 'title': 'De Nessermolen 44  1188 JB Amstelveen', 'reference': '1805240100', 'activities': [{'id': '64327b1c-a9ce-4ccd-8640-bf7bb104d222', 'title': 'DM ...</msg>
+<status status="PASS" starttime="20191020 19:46:44.416" endtime="20191020 19:46:44.446"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${test}</arg>
+</arguments>
+<msg timestamp="20191020 19:46:44.447" level="INFO">[{'id': '0276dae3-7274-41ea-8f0e-e3d866b507f1', 'title': 'De Nessermolen 44  1188 JB Amstelveen', 'reference': '1805240100', 'activities': [{'id': '64327b1c-a9ce-4ccd-8640-bf7bb104d222', 'title': 'DM auto email3', 'description': '', 'notes': None, 'link': None, 'type': 5, 'createdAt': '2018-05-24T08:45:02.7480737+00:00', 'createdBy': 'linh.mai@kolekto.nl', 'modifiedBy': None, 'modifiedAt': None, 'direction': 1, 'recipients': [], 'activityDate': '2018-05-24T08:45:02.7168031+00:00', 'metadata': '{"id":"69366a67-8637-4720-bb56-6823a0e35c3c","actionId":"9949cf2f-0f93-4a8c-8db6-8af97c10a21f","sqlAutoActionId":"55612ec5-8c03-444c-71ab-08d5c1517adc","template":"/sites/lmorgdo4/EmailTemplates/24012018_111004353.docx","status":2,"executedDate":"2018-05-24T08:45:02.7168031+00:00","description":null,"errorCode":"8d61d6a3-628f-468a-b26e-6daf322f8b2e","actionType":0,"failedInfo":3}', 'status': 0, 'createdByOrganization': '00000000-0000-0000-0000-000000000000', 'isInternal': False}, {'id': 'c769fd30-690a-46d6-8016-864f509277de', 'title': 'test template', 'description': 'test template', 'notes': 'https://kolekto.sharepoint.com/:i:/s/lmorgdo4/ESEqvD3Ft5NMmHpAFpitzLMBGFX9z2HDIlra3IF9htEF9g', 'link': 'https://kolekto.sharepoint.com/:w:/s/lmorgdo4/EcNjmYj-rFdPsKv1Vb0X010BH9hw1LYD_mwqlqs1A4khxQ', 'type': 4, 'createdAt': '2018-05-24T08:45:02.3105494+00:00', 'createdBy': 'linh.mai@kolekto.nl', 'modifiedBy': None, 'modifiedAt': None, 'direction': 1, 'recipients': [], 'activityDate': '2018-05-24T08:44:29.754+00:00', 'metadata': '{"letterContent":{"name":"test template","contentLocation":"https://kolekto.sharepoint.com/sites/lmorgdo4/DossierDocuments/1805240100/test template_24052018_084338560.docx?d=w889963c3acfe4f57b0abf555bd17d35d","previewImageLocation":"https://kolekto.sharepoint.com/sites/lmorgdo4/PreviewImages/1805240100/test template_24052018_084404606.png","previewAnonymousLink":"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/ESEqvD3Ft5NMmHpAFpitzLMBGFX9z2HDIlra3IF9htEF9g","contentAnonymousLink":"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/EcNjmYj-rFdPsKv1Vb0X010BH9hw1LYD_mwqlqs1A4khxQ"}}', 'status': 0, 'createdByOrganization': '00000000-0000-0000-0000-000000000000', 'isInternal': False}, {'id': 'd581655f-c8ca-4832-ac29-dd040ee12024', 'title': 'LM Org DO 4', 'description': 'LM Org DO 4', 'notes': 'Evaluation Only. Created with Aspose.Words. Copyright 2003-2017 Aspose Pty Ltd.\r\nTest calculated properties\r\n- Property name : \r\n- Property street : De Nessermolen\r\n- Property number : 44\r\n- Property city : Amstelveen\r\n- Property number addition : \r\n- Owner company name : LM Org DO 4\r\n- Owner email : linh.mai@kolekto.nl\r\n- Owner street : Verheullaan\r\n- Dossier reference : 1805240100\r\n- Pay to service : €0,00\r\n- Rent – Tax : €0,00\r\n- Tatal amount value : €0,00\r\n- Base amount : €0,00\r\n- Test dot : €0,00\r\n- Hoofdsom + incassokst : €0,00\r\n\r\n\r\n', 'link': None, 'type': 6, 'createdAt': '2018-05-24T08:40:07.8854784+00:00', 'createdBy': 'System Admin', 'modifiedBy': None, 'modifiedAt': None, 'direction': 1, 'recipients': [], 'activityDate': '2018-05-24T08:40:07.8854784+00:00', 'metadata': '{"id":"3c382161-4127-4a42-8fc5-f4c819046fc4","href":"https://rest.messagebird.com/messages/65f174d40b7e407e8c3a92f662fe2061","direction":"mt","type":"sms","originator":"LM Org DO 4","body":"Evaluation Only. Created with Aspose.Words. Copyright 2003-2017 Aspose Pty Ltd.\\r\\nTest calculated properties\\r\\n- Property name : \\r\\n- Property street : De Nessermolen\\r\\n- Property number : 44\\r\\n- Property city : Amstelveen\\r\\n- Property number addition : \\r\\n- Owner company name : LM Org DO 4\\r\\n- Owner email : linh.mai@kolekto.nl\\r\\n- Owner street : Verheullaan\\r\\n- Dossier reference : 1805240100\\r\\n- Pay to service : €0,00\\r\\n- Rent  Tax : €0,00\\r\\n- Tatal amount value : €0,00\\r\\n- Base amount : €0,00\\r\\n- Test dot : €0,00\\r\\n- Hoofdsom + incassokst : €0,00","reference":null,"validity":null,"gateway":10,"typeDetails":{},"datacoding":"plain","mclass":1,"scheduledDatetime":null,"createdDatetime":"2018-05-24T08:40:07+00:00","recipients":{"totalCount":1,"totalSentCount":1,"totalDeliveredCount":0,"totalDeliveryFailedCount":0,"items":[{"recipient":84932733681,"status":"sent","statusDatetime":"2018-05-24T08:40:07+00:00"}]},"actionId":"6e078741-42ce-48bb-ab30-148dce34bd26","sqlAutoActionId":"fb9ec445-5860-4508-71aa-08d5c1517adc","template":"/sites/lmorgdo4/TextMessageTemplates/17052018_042659953.docx","status":1,"executedDate":"2018-05-24T08:36:44.0572329+00:00","description":null,"errorCode":null,"actionType":2,"failedInfo":0}', 'status': 0, 'createdByOrganization': '00000000-0000-0000-0000-000000000000', 'isInternal': False}, {'id': '5e64df8d-ccbf-4a76-89d9-2ac9c901536d', 'title': 'test template', 'description': 'test template', 'notes': 'https://kolekto.sharepoint.com/:i:/s/lmorgdo4/EXBqb-iPx9VFsYEToKGMMJgBKyZ6o_JU00tCN4K3Um3hjw', 'link': 'https://kolekto.sharepoint.com/:w:/s/lmorgdo4/ERf40jsbtbNPnkYQeXTY-KYBiSwJqm33HFBssV54zveFYA', 'type': 4, 'createdAt': '2018-05-24T08:36:43.6805981+00:00', 'createdBy': 'linh.mai@kolekto.nl', 'modifiedBy': None, 'modifiedAt': None, 'direction': 1, 'recipients': [], 'activityDate': '2018-05-24T08:36:35.455+00:00', 'metadata': '{"letterContent":{"name":"test template","contentLocation":"https://kolekto.sharepoint.com/sites/lmorgdo4/DossierDocuments/1805240100/test template_24052018_083545626.docx?d=w3bd2f817b51b4fb39e46107974d8f8a6","previewImageLocation":"https://kolekto.sharepoint.com/sites/lmorgdo4/PreviewImages/1805240100/test template_24052018_083622515.png","previewAnonymousLink":"https://kolekto.sharepoint.com/:i:/s/lmorgdo4/EXBqb-iPx9VFsYEToKGMMJgBKyZ6o_JU00tCN4K3Um3hjw","contentAnonymousLink":"https://kolekto.sharepoint.com/:w:/s/lmorgdo4/ERf40jsbtbNPnkYQeXTY-KYBiSwJqm33HFBssV54zveFYA"}}', 'status': 0, 'createdByOrganization': '00000000-0000-0000-0000-000000000000', 'isInternal': False}], 'status': {'phase': 0, 'status': '4c46e185-594b-4829-0adf-08d535607307', 'note': None, 'statusDate': '2018-05-24T08:45:02.5137197Z', 'scheduleDate': '2018-05-25T08:45:02.5137197Z', 'modifiedAt': '2018-05-24T08:45:03.0918144+00:00', 'modifiedBy': 'linh.mai@kolekto.nl', 'subStatus': None}, 'claimInfo': None, 'settlements': [], 'huurObject': {'id': '8df1cb60-e193-4b70-86fb-0166407d7d09', 'name': '', 'reference': '', 'address': {'street': 'De Nessermolen', 'number': '44', 'numberAddition': None, 'postalCode': '1188 JB', 'city': 'Amstelveen', 'stateProvince': None, 'country': None, 'isPOBox': False}, 'lat': None, 'lon': None}, 'huurOvereenkomst': None, 'tenants': [], 'landlords': [{'id': 'c644d585-0e67-46ed-b948-6e321342bd3b', 'roles': 'owner', 'principal': False, 'person': {'id': '7ed74946-fcd4-4a6e-b323-8788c95941cc', 'fullName': None, 'firstName': None, 'middleName': None, 'lastName': None, 'initials': None, 'birthDay': None, 'sex': None, 'companyName': 'LM Org DO 4', 'contactPerson': None, 'vatNumber': None, 'registeredOffice': None, 'type': 0, 'salutation': None, 'reference': None, 'mailAddress': {'street': 'Verheullaan', 'number': '64', 'numberAddition': None, 'postalCode': '2661 SP', 'city': 'Bergschenhoek', 'stateProvince': None, 'country': None, 'isPOBox': False}, 'communicationInfo': {'phone': None, 'mobilePhone': '+84948018747', 'fax': None, 'email': 'linh.mai@kolekto.nl', 'internet': None, 'twitter': None}, 'officialRegistrationNumber': None, 'kvk': '12345', 'debtorNumber': None, 'bankInfo': None, 'insolvent': None, 'insolventDate': None, 'deceased': None, 'deceasedDate': None, 'insolvencyNote': None}, 'beneficiary': False, 'copiedContactId': None, 'organizationId': None, 'legalForm': None, 'tradeName': None}], 'createdAt': '2018-05-24T08:34:57.6246728+00:00', 'createdBy': 'linh.mai@kolekto.nl', 'modifiedAt': '2018-05-24T08:45:03.0918144+00:00', 'modifiedBy': 'linh.mai@kolekto.nl', 'organization': {'organizationId': 'D0002', 'name': 'LM Org DO', 'type': 'Data Owner', 'tenantId': '2fe10c48-560c-4295-82cb-df1063048bcd', 'dataCollectionName': 'LM Org DO 4', 'dataCollectionUserName': 'linh.mai.admin@kolekto.nl', 'docStorageUrl': 'https://kolekto.sharepoint.com/sites/lmorgdo4', 'createdAt': '2017-11-21T06:49:30.7514536+00:00', 'createdBy': 'linh.mai.admin@kolekto.nl', 'modifiedAt': '2019-10-16T10:09:52.757789+00:00', 'modifiedBy': 'long.nguyen@kolekto.nl', 'role': 'client', 'kvk': '12345', 'city': 'Amstelveen', 'street': 'De Nessermolen', 'postalCode': '1188 JB', 'numberAddition': '23', 'number': '26', 'mobilePhone': '+84948018747', 'phone': '1234564', 'email': 'linh.mai@kolekto.nl', 'internalName': None, 'vcaBankAccount': 'PL56565656565656', 'vcaBankAccountName': 'Credicare Care SI', 'enableVirtualCA': True, 'logoUrl': 'https://kolektohuurintegration.blob.core.windows.net/kolekto-images/logo/7e7b5e59-3d1f-4f93-902e-e18b9fe5f800.png', 'outboundMailbox': 'development@kolekto.nl', 'enableOutboundMailbox': True, 'bankAccount': 'NL34555555556666', 'bankAccountName': 'Kolekto', 'storageContainerName': 'lmorgdo4', 'smsName': 'SMSname1234', 'vcasmsName': 'VCA1234', 'organizationBankAccounts': [], 'id': 'f8636618-4f27-4780-97ed-08d52fdae3ad'}, 'organizationId': 'f8636618-4f27-4780-97ed-08d52fdae3ad', 'dossierTypeId': 'a695965b-e93e-473c-ef2b-08d5b974fb59', 'flow': {'id': '0745a1a8-b438-4753-8f1b-695b07f56573', 'name': '0', 'description': None, 'actions': [{'id': '9e8b83ae-9319-474b-a63b-9fcac6a48718', 'name': 'DM 1', 'description': '', 'isAutomatic': False, 'systemAction': 1, 'templateCategory': '243577d8-3bf6-4032-0f80-08d530b6505a', 'templateInfoId': None, 'attachmentTemplateInfoId': None, 'scheduleDelay': 0, 'resultStatus': 'b7fdd0ea-bb25-4ef9-b4d9-08d5332105ca', 'order': 0, 'handler': None, 'recipientGroups': ['owner'], 'additionalRecipients': [], 'from': None, 'scheduleDate': None, 'executedDate': None, 'actionTypeId': None}, {'id': '6e078741-42ce-48bb-ab30-148dce34bd26', 'name': 'DM_SMS auto1', 'description': '', 'isAutomatic': True, 'systemAction': 2, 'templateCategory': '243577d8-3bf6-4032-0f80-08d530b6505a', 'templateInfoId': None, 'attachmentTemplateInfoId': None, 'scheduleDelay': 0, 'resultStatus': '', 'order': 1, 'handler': {'handlerUserId': '41bd288a-c27f-4e57-789c-08d54c1871aa', 'handlingOrganizationId': 'b2abe5f4-279b-44c1-ac9d-08d59b894155', 'handlerName': None, 'handlingOrganizationName': None, 'handlingOrgLogoUrl': None, 'isVirtualHandler': False}, 'recipientGroups': [], 'additionalRecipients': ['+84932733681'], 'from': 'LM Org DO 4', 'scheduleDate': None, 'executedDate': None, 'actionTypeId': None}, {'id': '47fac343-2c0b-4868-a624-897ef7518f2c', 'name': 'DM manual 2_SMS', 'description': '', 'isAutomatic': False, 'systemAction': 1, 'templateCategory': '243577d8-3bf6-4032-0f80-08d530b6505a', 'templateInfoId': None, 'attachmentTemplateInfoId': None, 'scheduleDelay': 1, 'resultStatus': '4c46e185-594b-4829-0adf-08d535607307', 'order': 3, 'handler': {'handlerUserId': 'ffcecbfb-48d3-44bb-e5fa-08d55c9c8613', 'handlingOrganizationId': 'f8636618-4f27-4780-97ed-08d52fdae3ad', 'handlerName': None, 'handlingOrganizationName': None, 'handlingOrgLogoUrl': None, 'isVirtualHandler': False}, 'recipientGroups': ['tenant'], 'additionalRecipients': [], 'from': None, 'scheduleDate': None, 'executedDate': None, 'actionTypeId': None}, {'id': '9949cf2f-0f93-4a8c-8db6-8af97c10a21f', 'name': 'DM auto email3', 'description': '', 'isAutomatic': True, 'systemAction': 0, 'templateCategory': '243577d8-3bf6-4032-0f80-08d530b6505a', 'templateInfoId': None, 'attachmentTemplateInfoId': None, 'scheduleDelay': 0, 'resultStatus': '', 'order': 4, 'handler': None, 'recipientGroups': [], 'additionalRecipients': ['linh.mai@kolekto.nl'], 'from': 'development@kolekto.nl', 'scheduleDate': None, 'executedDate': None, 'actionTypeId': None}], 'createdDate': '2018-05-14T08:30:42.8085526+00:00', 'createdBy': 'linh.mai.admin@kolekto.nl', 'modifiedDate': '2018-05-16T04:00:09.5328789+00:00', 'modifiedBy': 'linh.mai.admin@kolekto.nl', 'dossierTypeId': 'a695965b-e93e-473c-ef2b-08d5b974fb59', 'inProgress': False, 'nextAction': None, 'organizationId': '00000000-0000-0000-0000-000000000000', 'docType': 'Flow'}, 'bookings': [], 'paymentLinks': [], 'handler': {'handlerUserId': 'ffcecbfb-48d3-44bb-e5fa-08d55c9c8613', 'handlingOrganizationId': 'f8636618-4f27-4780-97ed-08d52fdae3ad', 'handlerName': 'Linh Mai 3', 'handlingOrganizationName': 'LM Org DO', 'handlingOrgLogoUrl': 'https://kolektohuurintegration.blob.core.windows.net/kolekto-images/logo/7e7b5e59-3d1f-4f93-902e-e18b9fe5f800.png', 'isVirtualHandler': False}, 'dossierStatus': 0, 'externalReference': None, 'court': None, 'courtLocation': None, 'parties': [{'id': 'c644d585-0e67-46ed-b948-6e321342bd3b', 'roles': 'claimant', 'principal': False, 'person': {'id': '7ed74946-fcd4-4a6e-b323-8788c95941cc', 'fullName': None, 'firstName': None, 'middleName': None, 'lastName': None, 'initials': None, 'birthDay': None, 'sex': None, 'companyName': 'LM Org DO 4', 'contactPerson': None, 'vatNumber': None, 'registeredOffice': None, 'type': 0, 'salutation': None, 'reference': None, 'mailAddress': {'street': 'Verheullaan', 'number': '64', 'numberAddition': None, 'postalCode': '2661 SP', 'city': 'Bergschenhoek', 'stateProvince': None, 'country': None, 'isPOBox': False}, 'communicationInfo': {'phone': None, 'mobilePhone': '+84948018747', 'fax': None, 'email': 'linh.mai@kolekto.nl', 'internet': None, 'twitter': None}, 'officialRegistrationNumber': None, 'kvk': '12345', 'debtorNumber': None, 'bankInfo': None, 'insolvent': None, 'insolventDate': None, 'deceased': None, 'deceasedDate': None, 'insolvencyNote': None}, 'beneficiary': False, 'copiedContactId': None, 'organizationId': None, 'legalForm': None, 'tradeName': None}], 'filterText': 'de nessermolen 44  1188 jb amstelveen 1805240100  ', 'orderCreateDate': 1527150897, 'orderScheduledDate': 1527237902, 'dossierNotifications': [], 'debtor': None, 'debtorName': None, 'debtorBalance': 0.0, 'docType': 'Dossier'}]</msg>
+<status status="PASS" starttime="20191020 19:46:44.447" endtime="20191020 19:46:44.447"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:42.962" endtime="20191020 19:46:44.448" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Get list of dossier after filter">
+<kw name="Go To Dossiers" library="kolekto">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/dossiers</arg>
+</arguments>
+<msg timestamp="20191020 19:46:44.457" level="INFO">Clicking link '/dossiers'.</msg>
+<status status="PASS" starttime="20191020 19:46:44.457" endtime="20191020 19:46:44.585"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:44.456" endtime="20191020 19:46:44.585"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:i.kol-dossiers-grid-view</arg>
+</arguments>
+<msg timestamp="20191020 19:46:44.587" level="INFO">Clicking element 'css:i.kol-dossiers-grid-view'.</msg>
+<status status="PASS" starttime="20191020 19:46:44.586" endtime="20191020 19:46:44.699"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>//div[@data-automationid='DetailsRowFields']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:44.699" endtime="20191020 19:46:45.844"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>${rowList}</var>
+</assign>
+<msg timestamp="20191020 19:46:45.845" level="INFO">${rowList} = []</msg>
+<status status="PASS" starttime="20191020 19:46:45.845" endtime="20191020 19:46:45.845"></status>
+</kw>
+<kw name="${i} IN RANGE [ 200 ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:45.846" endtime="20191020 19:46:46.154"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:46.180" level="INFO">${Ref} = 1805290101</msg>
+<status status="PASS" starttime="20191020 19:46:46.154" endtime="20191020 19:46:46.180"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:46.180" endtime="20191020 19:46:46.181"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:45.846" endtime="20191020 19:46:46.181"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:46.181" endtime="20191020 19:46:46.471"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:46.498" level="INFO">${Ref} = 1805250114</msg>
+<status status="PASS" starttime="20191020 19:46:46.471" endtime="20191020 19:46:46.498"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:46.498" endtime="20191020 19:46:46.498"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:46.181" endtime="20191020 19:46:46.498"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:46.499" endtime="20191020 19:46:46.790"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:46.828" level="INFO">${Ref} = 1805140106</msg>
+<status status="PASS" starttime="20191020 19:46:46.790" endtime="20191020 19:46:46.828"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:46.828" endtime="20191020 19:46:46.828"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:46.499" endtime="20191020 19:46:46.828"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:46.828" endtime="20191020 19:46:47.109"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:47.158" level="INFO">${Ref} = 1805150101</msg>
+<status status="PASS" starttime="20191020 19:46:47.110" endtime="20191020 19:46:47.158"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:47.158" endtime="20191020 19:46:47.159"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:46.828" endtime="20191020 19:46:47.159"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:47.159" endtime="20191020 19:46:47.440"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:47.477" level="INFO">${Ref} = 1805150102</msg>
+<status status="PASS" starttime="20191020 19:46:47.441" endtime="20191020 19:46:47.477"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:47.477" endtime="20191020 19:46:47.477"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:47.159" endtime="20191020 19:46:47.477"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:47.478" endtime="20191020 19:46:47.755"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:47.789" level="INFO">${Ref} = 1805150105</msg>
+<status status="PASS" starttime="20191020 19:46:47.755" endtime="20191020 19:46:47.789"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:47.789" endtime="20191020 19:46:47.789"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:47.477" endtime="20191020 19:46:47.789"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:47.790" endtime="20191020 19:46:48.072"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:48.129" level="INFO">${Ref} = 1805150106</msg>
+<status status="PASS" starttime="20191020 19:46:48.073" endtime="20191020 19:46:48.129"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:48.129" endtime="20191020 19:46:48.130"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:47.789" endtime="20191020 19:46:48.130"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:48.130" endtime="20191020 19:46:48.408"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:48.449" level="INFO">${Ref} = 1805150107</msg>
+<status status="PASS" starttime="20191020 19:46:48.409" endtime="20191020 19:46:48.449"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:48.449" endtime="20191020 19:46:48.450"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:48.130" endtime="20191020 19:46:48.450"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:48.450" endtime="20191020 19:46:48.725"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:48.751" level="INFO">${Ref} = 1805150108</msg>
+<status status="PASS" starttime="20191020 19:46:48.726" endtime="20191020 19:46:48.751"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:48.751" endtime="20191020 19:46:48.751"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:48.450" endtime="20191020 19:46:48.751"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:48.751" endtime="20191020 19:46:49.027"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:49.069" level="INFO">${Ref} = 1805150109</msg>
+<status status="PASS" starttime="20191020 19:46:49.028" endtime="20191020 19:46:49.069"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:49.070" endtime="20191020 19:46:49.070"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:48.751" endtime="20191020 19:46:49.070"></status>
+</kw>
+<kw name="${i} = 10" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:49.070" endtime="20191020 19:46:49.364"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:49.403" level="INFO">${Ref} = 1805150110</msg>
+<status status="PASS" starttime="20191020 19:46:49.364" endtime="20191020 19:46:49.403"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:49.403" endtime="20191020 19:46:49.404"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:49.070" endtime="20191020 19:46:49.404"></status>
+</kw>
+<kw name="${i} = 11" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:49.404" endtime="20191020 19:46:49.687"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:49.728" level="INFO">${Ref} = 1805150112</msg>
+<status status="PASS" starttime="20191020 19:46:49.687" endtime="20191020 19:46:49.728"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:49.728" endtime="20191020 19:46:49.728"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:49.404" endtime="20191020 19:46:49.728"></status>
+</kw>
+<kw name="${i} = 12" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:49.729" endtime="20191020 19:46:50.017"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:50.047" level="INFO">${Ref} = 1805150113</msg>
+<status status="PASS" starttime="20191020 19:46:50.018" endtime="20191020 19:46:50.047"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:50.048" endtime="20191020 19:46:50.048"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:49.728" endtime="20191020 19:46:50.048"></status>
+</kw>
+<kw name="${i} = 13" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:50.048" endtime="20191020 19:46:50.335"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:50.375" level="INFO">${Ref} = 1805150114</msg>
+<status status="PASS" starttime="20191020 19:46:50.335" endtime="20191020 19:46:50.375"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:50.376" endtime="20191020 19:46:50.376"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:50.048" endtime="20191020 19:46:50.376"></status>
+</kw>
+<kw name="${i} = 14" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:50.376" endtime="20191020 19:46:50.667"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:50.693" level="INFO">${Ref} = 1805150116</msg>
+<status status="PASS" starttime="20191020 19:46:50.668" endtime="20191020 19:46:50.693"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:50.693" endtime="20191020 19:46:50.694"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:50.376" endtime="20191020 19:46:50.694"></status>
+</kw>
+<kw name="${i} = 15" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:50.694" endtime="20191020 19:46:50.986"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:51.014" level="INFO">${Ref} = 1805250115</msg>
+<status status="PASS" starttime="20191020 19:46:50.986" endtime="20191020 19:46:51.014"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:51.014" endtime="20191020 19:46:51.014"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:50.694" endtime="20191020 19:46:51.014"></status>
+</kw>
+<kw name="${i} = 16" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:51.015" endtime="20191020 19:46:51.303"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:51.346" level="INFO">${Ref} = 1805160100</msg>
+<status status="PASS" starttime="20191020 19:46:51.303" endtime="20191020 19:46:51.346"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:51.346" endtime="20191020 19:46:51.346"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:51.014" endtime="20191020 19:46:51.346"></status>
+</kw>
+<kw name="${i} = 17" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:51.347" endtime="20191020 19:46:51.636"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:51.671" level="INFO">${Ref} = 1805150115</msg>
+<status status="PASS" starttime="20191020 19:46:51.637" endtime="20191020 19:46:51.671"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:51.671" endtime="20191020 19:46:51.671"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:51.347" endtime="20191020 19:46:51.672"></status>
+</kw>
+<kw name="${i} = 18" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:51.672" endtime="20191020 19:46:51.969"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:51.995" level="INFO">${Ref} = 1805210100</msg>
+<status status="PASS" starttime="20191020 19:46:51.969" endtime="20191020 19:46:51.995"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:51.995" endtime="20191020 19:46:51.995"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:51.672" endtime="20191020 19:46:51.995"></status>
+</kw>
+<kw name="${i} = 19" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:51.995" endtime="20191020 19:46:52.285"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:52.310" level="INFO">${Ref} = 1805220100</msg>
+<status status="PASS" starttime="20191020 19:46:52.285" endtime="20191020 19:46:52.310"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:52.310" endtime="20191020 19:46:52.310"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:51.995" endtime="20191020 19:46:52.310"></status>
+</kw>
+<kw name="${i} = 20" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:52.311" endtime="20191020 19:46:52.603"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:52.644" level="INFO">${Ref} = 1805220101</msg>
+<status status="PASS" starttime="20191020 19:46:52.604" endtime="20191020 19:46:52.644"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:52.644" endtime="20191020 19:46:52.644"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:52.310" endtime="20191020 19:46:52.644"></status>
+</kw>
+<kw name="${i} = 21" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:52.644" endtime="20191020 19:46:52.935"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:52.989" level="INFO">${Ref} = 1805230100</msg>
+<status status="PASS" starttime="20191020 19:46:52.936" endtime="20191020 19:46:52.989"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:52.989" endtime="20191020 19:46:52.990"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:52.644" endtime="20191020 19:46:52.990"></status>
+</kw>
+<kw name="${i} = 22" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:52.990" endtime="20191020 19:46:53.287"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:53.330" level="INFO">${Ref} = 1805230104</msg>
+<status status="PASS" starttime="20191020 19:46:53.287" endtime="20191020 19:46:53.330"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:53.330" endtime="20191020 19:46:53.330"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:52.990" endtime="20191020 19:46:53.330"></status>
+</kw>
+<kw name="${i} = 23" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:53.331" endtime="20191020 19:46:53.619"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:53.661" level="INFO">${Ref} = 1805230106</msg>
+<status status="PASS" starttime="20191020 19:46:53.619" endtime="20191020 19:46:53.661"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:53.661" endtime="20191020 19:46:53.662"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:53.331" endtime="20191020 19:46:53.662"></status>
+</kw>
+<kw name="${i} = 24" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:53.662" endtime="20191020 19:46:53.952"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:53.998" level="INFO">${Ref} = 1805230107</msg>
+<status status="PASS" starttime="20191020 19:46:53.953" endtime="20191020 19:46:53.998"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:53.998" endtime="20191020 19:46:53.999"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:53.662" endtime="20191020 19:46:53.999"></status>
+</kw>
+<kw name="${i} = 25" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:53.999" endtime="20191020 19:46:54.286"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:54.327" level="INFO">${Ref} = 1805230110</msg>
+<status status="PASS" starttime="20191020 19:46:54.286" endtime="20191020 19:46:54.327"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:54.327" endtime="20191020 19:46:54.327"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:53.999" endtime="20191020 19:46:54.327"></status>
+</kw>
+<kw name="${i} = 26" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:54.327" endtime="20191020 19:46:54.619"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:54.644" level="INFO">${Ref} = 1805230112</msg>
+<status status="PASS" starttime="20191020 19:46:54.620" endtime="20191020 19:46:54.644"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:54.644" endtime="20191020 19:46:54.644"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:54.327" endtime="20191020 19:46:54.644"></status>
+</kw>
+<kw name="${i} = 27" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:54.645" endtime="20191020 19:46:54.934"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:54.959" level="INFO">${Ref} = 1805250113</msg>
+<status status="PASS" starttime="20191020 19:46:54.934" endtime="20191020 19:46:54.959"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:54.959" endtime="20191020 19:46:54.959"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:54.645" endtime="20191020 19:46:54.959"></status>
+</kw>
+<kw name="${i} = 28" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:54.959" endtime="20191020 19:46:55.251"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:55.289" level="INFO">${Ref} = 1805240101</msg>
+<status status="PASS" starttime="20191020 19:46:55.252" endtime="20191020 19:46:55.290"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:55.290" endtime="20191020 19:46:55.290"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:54.959" endtime="20191020 19:46:55.290"></status>
+</kw>
+<kw name="${i} = 29" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:55.290" endtime="20191020 19:46:55.584"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:55.621" level="INFO">${Ref} = 1805240103</msg>
+<status status="PASS" starttime="20191020 19:46:55.584" endtime="20191020 19:46:55.621"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:55.621" endtime="20191020 19:46:55.622"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:55.290" endtime="20191020 19:46:55.622"></status>
+</kw>
+<kw name="${i} = 30" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:55.622" endtime="20191020 19:46:55.919"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:55.962" level="INFO">${Ref} = 1805240106</msg>
+<status status="PASS" starttime="20191020 19:46:55.919" endtime="20191020 19:46:55.962"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:55.962" endtime="20191020 19:46:55.963"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:55.622" endtime="20191020 19:46:55.963"></status>
+</kw>
+<kw name="${i} = 31" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:55.963" endtime="20191020 19:46:56.251"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:56.303" level="INFO">${Ref} = 1805230113</msg>
+<status status="PASS" starttime="20191020 19:46:56.251" endtime="20191020 19:46:56.303"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:56.303" endtime="20191020 19:46:56.303"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:55.963" endtime="20191020 19:46:56.303"></status>
+</kw>
+<kw name="${i} = 32" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:56.304" endtime="20191020 19:46:56.600"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:56.640" level="INFO">${Ref} = 1805240104</msg>
+<status status="PASS" starttime="20191020 19:46:56.601" endtime="20191020 19:46:56.640"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:56.640" endtime="20191020 19:46:56.641"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:56.304" endtime="20191020 19:46:56.641"></status>
+</kw>
+<kw name="${i} = 33" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:56.641" endtime="20191020 19:46:56.933"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:57.002" level="INFO">${Ref} = 1805250100</msg>
+<status status="PASS" starttime="20191020 19:46:56.934" endtime="20191020 19:46:57.002"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:57.002" endtime="20191020 19:46:57.002"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:56.641" endtime="20191020 19:46:57.002"></status>
+</kw>
+<kw name="${i} = 34" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:57.003" endtime="20191020 19:46:57.300"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:57.346" level="INFO">${Ref} = 1805250100</msg>
+<status status="PASS" starttime="20191020 19:46:57.300" endtime="20191020 19:46:57.346"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:57.346" endtime="20191020 19:46:57.347"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:57.002" endtime="20191020 19:46:57.347"></status>
+</kw>
+<kw name="${i} = 35" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:57.347" endtime="20191020 19:46:57.633"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:57.680" level="INFO">${Ref} = 1805250102</msg>
+<status status="PASS" starttime="20191020 19:46:57.633" endtime="20191020 19:46:57.680"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:57.680" endtime="20191020 19:46:57.680"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:57.347" endtime="20191020 19:46:57.680"></status>
+</kw>
+<kw name="${i} = 36" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:57.681" endtime="20191020 19:46:57.967"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:58.008" level="INFO">${Ref} = 1805250107</msg>
+<status status="PASS" starttime="20191020 19:46:57.967" endtime="20191020 19:46:58.008"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:58.009" endtime="20191020 19:46:58.009"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:57.680" endtime="20191020 19:46:58.009"></status>
+</kw>
+<kw name="${i} = 37" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:58.009" endtime="20191020 19:46:58.302"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:58.342" level="INFO">${Ref} = 1805250108</msg>
+<status status="PASS" starttime="20191020 19:46:58.302" endtime="20191020 19:46:58.342"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:58.342" endtime="20191020 19:46:58.342"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:58.009" endtime="20191020 19:46:58.342"></status>
+</kw>
+<kw name="${i} = 38" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:58.342" endtime="20191020 19:46:58.633"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:58.690" level="INFO">${Ref} = 1805240100</msg>
+<status status="PASS" starttime="20191020 19:46:58.634" endtime="20191020 19:46:58.690"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:58.690" endtime="20191020 19:46:58.691"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:58.342" endtime="20191020 19:46:58.691"></status>
+</kw>
+<kw name="${i} = 39" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:58.691" endtime="20191020 19:46:58.985"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:59.029" level="INFO">${Ref} = 1805250111</msg>
+<status status="PASS" starttime="20191020 19:46:58.985" endtime="20191020 19:46:59.029"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:59.030" endtime="20191020 19:46:59.030"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:58.691" endtime="20191020 19:46:59.030"></status>
+</kw>
+<kw name="${i} = 40" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:59.030" endtime="20191020 19:46:59.316"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:59.345" level="INFO">${Ref} = 1805250101</msg>
+<status status="PASS" starttime="20191020 19:46:59.316" endtime="20191020 19:46:59.345"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:59.345" endtime="20191020 19:46:59.346"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:59.030" endtime="20191020 19:46:59.346"></status>
+</kw>
+<kw name="${i} = 41" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:59.346" endtime="20191020 19:46:59.631"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:46:59.661" level="INFO">${Ref} = 1805260100</msg>
+<status status="PASS" starttime="20191020 19:46:59.632" endtime="20191020 19:46:59.661"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:59.661" endtime="20191020 19:46:59.662"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:59.346" endtime="20191020 19:46:59.662"></status>
+</kw>
+<kw name="${i} = 42" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:46:59.662" endtime="20191020 19:46:59.951"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:00.002" level="INFO">${Ref} = 1805280101</msg>
+<status status="PASS" starttime="20191020 19:46:59.952" endtime="20191020 19:47:00.002"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:00.002" endtime="20191020 19:47:00.003"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:46:59.662" endtime="20191020 19:47:00.003"></status>
+</kw>
+<kw name="${i} = 43" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:00.004" endtime="20191020 19:47:00.301"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:00.339" level="INFO">${Ref} = 1805280102</msg>
+<status status="PASS" starttime="20191020 19:47:00.301" endtime="20191020 19:47:00.339"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:00.339" endtime="20191020 19:47:00.339"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:00.003" endtime="20191020 19:47:00.339"></status>
+</kw>
+<kw name="${i} = 44" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:00.339" endtime="20191020 19:47:00.621"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:00.647" level="INFO">${Ref} = 1805150100</msg>
+<status status="PASS" starttime="20191020 19:47:00.621" endtime="20191020 19:47:00.648"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:00.648" endtime="20191020 19:47:00.648"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:00.339" endtime="20191020 19:47:00.648"></status>
+</kw>
+<kw name="${i} = 45" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:00.648" endtime="20191020 19:47:00.933"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:00.979" level="INFO">${Ref} = 1805290102</msg>
+<status status="PASS" starttime="20191020 19:47:00.933" endtime="20191020 19:47:00.979"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:00.979" endtime="20191020 19:47:00.979"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:00.648" endtime="20191020 19:47:00.979"></status>
+</kw>
+<kw name="${i} = 46" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:00.979" endtime="20191020 19:47:01.264"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:01.306" level="INFO">${Ref} = 1805290103</msg>
+<status status="PASS" starttime="20191020 19:47:01.265" endtime="20191020 19:47:01.306"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:01.306" endtime="20191020 19:47:01.307"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:00.979" endtime="20191020 19:47:01.307"></status>
+</kw>
+<kw name="${i} = 47" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:01.307" endtime="20191020 19:47:01.601"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:01.651" level="INFO">${Ref} = 1805300103</msg>
+<status status="PASS" starttime="20191020 19:47:01.601" endtime="20191020 19:47:01.651"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:01.652" endtime="20191020 19:47:01.652"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:01.307" endtime="20191020 19:47:01.652"></status>
+</kw>
+<kw name="${i} = 48" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:01.652" endtime="20191020 19:47:01.949"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:01.987" level="INFO">${Ref} = 1805300109</msg>
+<status status="PASS" starttime="20191020 19:47:01.950" endtime="20191020 19:47:01.987"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:01.987" endtime="20191020 19:47:01.987"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:01.652" endtime="20191020 19:47:01.987"></status>
+</kw>
+<kw name="${i} = 49" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:01.987" endtime="20191020 19:47:02.282"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:02.308" level="INFO">${Ref} = 1805230105</msg>
+<status status="PASS" starttime="20191020 19:47:02.282" endtime="20191020 19:47:02.308"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:02.308" endtime="20191020 19:47:02.308"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:01.987" endtime="20191020 19:47:02.308"></status>
+</kw>
+<kw name="${i} = 50" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:02.308" endtime="20191020 19:47:03.186"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:03.216" level="INFO">${Ref} = 1805270100</msg>
+<status status="PASS" starttime="20191020 19:47:03.186" endtime="20191020 19:47:03.216"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:03.217" endtime="20191020 19:47:03.217"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:02.308" endtime="20191020 19:47:03.217"></status>
+</kw>
+<kw name="${i} = 51" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:03.217" endtime="20191020 19:47:03.500"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:03.529" level="INFO">${Ref} = 1806010101</msg>
+<status status="PASS" starttime="20191020 19:47:03.500" endtime="20191020 19:47:03.529"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:03.529" endtime="20191020 19:47:03.529"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:03.217" endtime="20191020 19:47:03.529"></status>
+</kw>
+<kw name="${i} = 52" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:03.529" endtime="20191020 19:47:03.818"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:03.865" level="INFO">${Ref} = 1806010103</msg>
+<status status="PASS" starttime="20191020 19:47:03.818" endtime="20191020 19:47:03.865"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:03.865" endtime="20191020 19:47:03.865"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:03.529" endtime="20191020 19:47:03.865"></status>
+</kw>
+<kw name="${i} = 53" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:03.865" endtime="20191020 19:47:04.234"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:04.267" level="INFO">${Ref} = 1806010105</msg>
+<status status="PASS" starttime="20191020 19:47:04.235" endtime="20191020 19:47:04.267"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:04.267" endtime="20191020 19:47:04.267"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:03.865" endtime="20191020 19:47:04.267"></status>
+</kw>
+<kw name="${i} = 54" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:04.268" endtime="20191020 19:47:04.552"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:04.604" level="INFO">${Ref} = 1805300108</msg>
+<status status="PASS" starttime="20191020 19:47:04.552" endtime="20191020 19:47:04.604"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:04.604" endtime="20191020 19:47:04.604"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:04.267" endtime="20191020 19:47:04.604"></status>
+</kw>
+<kw name="${i} = 55" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:04.605" endtime="20191020 19:47:04.916"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:04.952" level="INFO">${Ref} = 1806040100</msg>
+<status status="PASS" starttime="20191020 19:47:04.917" endtime="20191020 19:47:04.952"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:04.952" endtime="20191020 19:47:04.952"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:04.605" endtime="20191020 19:47:04.952"></status>
+</kw>
+<kw name="${i} = 56" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:04.953" endtime="20191020 19:47:05.248"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:05.271" level="INFO">${Ref} = 1806040101</msg>
+<status status="PASS" starttime="20191020 19:47:05.248" endtime="20191020 19:47:05.271"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:05.271" endtime="20191020 19:47:05.272"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:04.953" endtime="20191020 19:47:05.272"></status>
+</kw>
+<kw name="${i} = 57" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:05.272" endtime="20191020 19:47:05.565"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:05.610" level="INFO">${Ref} = 1806040103</msg>
+<status status="PASS" starttime="20191020 19:47:05.565" endtime="20191020 19:47:05.610"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:05.610" endtime="20191020 19:47:05.610"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:05.272" endtime="20191020 19:47:05.610"></status>
+</kw>
+<kw name="${i} = 58" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:05.611" endtime="20191020 19:47:05.897"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:05.936" level="INFO">${Ref} = 1806050101</msg>
+<status status="PASS" starttime="20191020 19:47:05.897" endtime="20191020 19:47:05.936"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:05.936" endtime="20191020 19:47:05.937"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:05.610" endtime="20191020 19:47:05.937"></status>
+</kw>
+<kw name="${i} = 59" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:05.937" endtime="20191020 19:47:06.284"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:06.316" level="INFO">${Ref} = 1806050103</msg>
+<status status="PASS" starttime="20191020 19:47:06.284" endtime="20191020 19:47:06.316"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:06.316" endtime="20191020 19:47:06.316"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:05.937" endtime="20191020 19:47:06.316"></status>
+</kw>
+<kw name="${i} = 60" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:06.316" endtime="20191020 19:47:06.600"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:06.627" level="INFO">${Ref} = 1806050104</msg>
+<status status="PASS" starttime="20191020 19:47:06.600" endtime="20191020 19:47:06.627"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:06.627" endtime="20191020 19:47:06.627"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:06.316" endtime="20191020 19:47:06.627"></status>
+</kw>
+<kw name="${i} = 61" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:06.628" endtime="20191020 19:47:06.919"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:06.959" level="INFO">${Ref} = 1806060101</msg>
+<status status="PASS" starttime="20191020 19:47:06.919" endtime="20191020 19:47:06.959"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:06.959" endtime="20191020 19:47:06.959"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:06.627" endtime="20191020 19:47:06.959"></status>
+</kw>
+<kw name="${i} = 62" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:06.960" endtime="20191020 19:47:07.263"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:07.303" level="INFO">${Ref} = 1806060102</msg>
+<status status="PASS" starttime="20191020 19:47:07.264" endtime="20191020 19:47:07.303"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:07.304" endtime="20191020 19:47:07.304"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:06.960" endtime="20191020 19:47:07.304"></status>
+</kw>
+<kw name="${i} = 63" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:07.304" endtime="20191020 19:47:07.596"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:07.642" level="INFO">${Ref} = 1806060103</msg>
+<status status="PASS" starttime="20191020 19:47:07.597" endtime="20191020 19:47:07.642"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:07.642" endtime="20191020 19:47:07.642"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:07.304" endtime="20191020 19:47:07.642"></status>
+</kw>
+<kw name="${i} = 64" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:07.643" endtime="20191020 19:47:07.931"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:07.982" level="INFO">${Ref} = 1806060109</msg>
+<status status="PASS" starttime="20191020 19:47:07.932" endtime="20191020 19:47:07.982"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:07.982" endtime="20191020 19:47:07.982"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:07.642" endtime="20191020 19:47:07.982"></status>
+</kw>
+<kw name="${i} = 65" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:07.983" endtime="20191020 19:47:08.279"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:08.318" level="INFO">${Ref} = 1806060111</msg>
+<status status="PASS" starttime="20191020 19:47:08.280" endtime="20191020 19:47:08.319"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:08.319" endtime="20191020 19:47:08.319"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:07.982" endtime="20191020 19:47:08.319"></status>
+</kw>
+<kw name="${i} = 66" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:08.319" endtime="20191020 19:47:08.615"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:08.668" level="INFO">${Ref} = 1806070100</msg>
+<status status="PASS" starttime="20191020 19:47:08.615" endtime="20191020 19:47:08.668"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:08.668" endtime="20191020 19:47:08.668"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:08.319" endtime="20191020 19:47:08.668"></status>
+</kw>
+<kw name="${i} = 67" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:08.669" endtime="20191020 19:47:08.965"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:09.010" level="INFO">${Ref} = 1806080100</msg>
+<status status="PASS" starttime="20191020 19:47:08.966" endtime="20191020 19:47:09.010"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:09.010" endtime="20191020 19:47:09.010"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:08.669" endtime="20191020 19:47:09.010"></status>
+</kw>
+<kw name="${i} = 68" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:09.011" endtime="20191020 19:47:09.384"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:09.439" level="INFO">${Ref} = 1806080102</msg>
+<status status="PASS" starttime="20191020 19:47:09.384" endtime="20191020 19:47:09.439"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:09.439" endtime="20191020 19:47:09.440"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:09.011" endtime="20191020 19:47:09.440"></status>
+</kw>
+<kw name="${i} = 69" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:09.440" endtime="20191020 19:47:09.732"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:09.763" level="INFO">${Ref} = 1806150101</msg>
+<status status="PASS" starttime="20191020 19:47:09.732" endtime="20191020 19:47:09.763"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:09.764" endtime="20191020 19:47:09.764"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:09.440" endtime="20191020 19:47:09.764"></status>
+</kw>
+<kw name="${i} = 70" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:09.764" endtime="20191020 19:47:10.048"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:10.238" level="INFO">${Ref} = 1806180108</msg>
+<status status="PASS" starttime="20191020 19:47:10.048" endtime="20191020 19:47:10.239"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:10.239" endtime="20191020 19:47:10.239"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:09.764" endtime="20191020 19:47:10.240"></status>
+</kw>
+<kw name="${i} = 71" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:10.240" endtime="20191020 19:47:10.531"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:10.560" level="INFO">${Ref} = 1806290100</msg>
+<status status="PASS" starttime="20191020 19:47:10.531" endtime="20191020 19:47:10.560"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:10.560" endtime="20191020 19:47:10.561"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:10.240" endtime="20191020 19:47:10.561"></status>
+</kw>
+<kw name="${i} = 72" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:10.561" endtime="20191020 19:47:10.847"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:10.876" level="INFO">${Ref} = 1807130113</msg>
+<status status="PASS" starttime="20191020 19:47:10.847" endtime="20191020 19:47:10.876"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:10.877" endtime="20191020 19:47:10.878"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:10.561" endtime="20191020 19:47:10.878"></status>
+</kw>
+<kw name="${i} = 73" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:10.878" endtime="20191020 19:47:11.164"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:11.207" level="INFO">${Ref} = 1807200102</msg>
+<status status="PASS" starttime="20191020 19:47:11.165" endtime="20191020 19:47:11.208"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:11.208" endtime="20191020 19:47:11.208"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:10.878" endtime="20191020 19:47:11.208"></status>
+</kw>
+<kw name="${i} = 74" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:11.208" endtime="20191020 19:47:11.497"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:11.524" level="INFO">${Ref} = 1807300103</msg>
+<status status="PASS" starttime="20191020 19:47:11.497" endtime="20191020 19:47:11.524"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:11.524" endtime="20191020 19:47:11.525"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:11.208" endtime="20191020 19:47:11.525"></status>
+</kw>
+<kw name="${i} = 75" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:11.525" endtime="20191020 19:47:11.840"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:11.869" level="INFO">${Ref} = 1808030100</msg>
+<status status="PASS" starttime="20191020 19:47:11.841" endtime="20191020 19:47:11.869"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:11.870" endtime="20191020 19:47:11.870"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:11.525" endtime="20191020 19:47:11.870"></status>
+</kw>
+<kw name="${i} = 76" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:11.870" endtime="20191020 19:47:12.189"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:12.640" level="INFO">${Ref} = 1808070100</msg>
+<status status="PASS" starttime="20191020 19:47:12.190" endtime="20191020 19:47:12.640"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:12.640" endtime="20191020 19:47:12.641"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:11.870" endtime="20191020 19:47:12.641"></status>
+</kw>
+<kw name="${i} = 77" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:12.641" endtime="20191020 19:47:12.933"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:13.133" level="INFO">${Ref} = 1808080118</msg>
+<status status="PASS" starttime="20191020 19:47:12.934" endtime="20191020 19:47:13.133"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:13.133" endtime="20191020 19:47:13.133"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:12.641" endtime="20191020 19:47:13.133"></status>
+</kw>
+<kw name="${i} = 78" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:13.134" endtime="20191020 19:47:13.414"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:13.440" level="INFO">${Ref} = 1808130101</msg>
+<status status="PASS" starttime="20191020 19:47:13.414" endtime="20191020 19:47:13.440"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:13.440" endtime="20191020 19:47:13.441"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:13.133" endtime="20191020 19:47:13.441"></status>
+</kw>
+<kw name="${i} = 79" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:13.441" endtime="20191020 19:47:13.730"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:13.760" level="INFO">${Ref} = 1808200158</msg>
+<status status="PASS" starttime="20191020 19:47:13.730" endtime="20191020 19:47:13.760"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:13.760" endtime="20191020 19:47:13.761"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:13.441" endtime="20191020 19:47:13.761"></status>
+</kw>
+<kw name="${i} = 80" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:13.761" endtime="20191020 19:47:14.915"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:15.438" level="INFO">${Ref} = 1808240110</msg>
+<status status="PASS" starttime="20191020 19:47:14.916" endtime="20191020 19:47:15.438"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:15.438" endtime="20191020 19:47:15.438"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:13.761" endtime="20191020 19:47:15.438"></status>
+</kw>
+<kw name="${i} = 81" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:15.439" endtime="20191020 19:47:15.731"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:16.132" level="INFO">${Ref} = 1805290100</msg>
+<status status="PASS" starttime="20191020 19:47:15.732" endtime="20191020 19:47:16.132"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:16.133" endtime="20191020 19:47:16.133"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:15.438" endtime="20191020 19:47:16.133"></status>
+</kw>
+<kw name="${i} = 82" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:16.133" endtime="20191020 19:47:16.434"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:17.082" level="INFO">${Ref} = 1808240115</msg>
+<status status="PASS" starttime="20191020 19:47:16.434" endtime="20191020 19:47:17.082"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:17.082" endtime="20191020 19:47:17.082"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:16.133" endtime="20191020 19:47:17.082"></status>
+</kw>
+<kw name="${i} = 83" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:17.083" endtime="20191020 19:47:17.362"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:17.521" level="INFO">${Ref} = </msg>
+<status status="PASS" starttime="20191020 19:47:17.363" endtime="20191020 19:47:17.521"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:17.521" endtime="20191020 19:47:17.521"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:17.082" endtime="20191020 19:47:17.521"></status>
+</kw>
+<kw name="${i} = 84" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:17.522" endtime="20191020 19:47:17.813"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:18.650" level="INFO">${Ref} = 1811220100</msg>
+<status status="PASS" starttime="20191020 19:47:17.813" endtime="20191020 19:47:18.650"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:18.650" endtime="20191020 19:47:18.650"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:17.521" endtime="20191020 19:47:18.650"></status>
+</kw>
+<kw name="${i} = 85" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:18.650" endtime="20191020 19:47:18.930"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:19.106" level="INFO">${Ref} = </msg>
+<status status="PASS" starttime="20191020 19:47:18.931" endtime="20191020 19:47:19.106"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:19.106" endtime="20191020 19:47:19.107"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:18.650" endtime="20191020 19:47:19.107"></status>
+</kw>
+<kw name="${i} = 86" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:19.107" endtime="20191020 19:47:19.395"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:19.576" level="INFO">${Ref} = </msg>
+<status status="PASS" starttime="20191020 19:47:19.395" endtime="20191020 19:47:19.576"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:19.576" endtime="20191020 19:47:19.577"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:19.107" endtime="20191020 19:47:19.577"></status>
+</kw>
+<kw name="${i} = 87" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:19.577" endtime="20191020 19:47:19.865"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:20.907" level="INFO">${Ref} = 1901160102</msg>
+<status status="PASS" starttime="20191020 19:47:19.866" endtime="20191020 19:47:20.907"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:20.907" endtime="20191020 19:47:20.907"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:19.577" endtime="20191020 19:47:20.907"></status>
+</kw>
+<kw name="${i} = 88" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:20.908" endtime="20191020 19:47:21.193"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:21.359" level="INFO">${Ref} = </msg>
+<status status="PASS" starttime="20191020 19:47:21.194" endtime="20191020 19:47:21.359"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:21.359" endtime="20191020 19:47:21.359"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:20.907" endtime="20191020 19:47:21.359"></status>
+</kw>
+<kw name="${i} = 89" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:21.360" endtime="20191020 19:47:21.663"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:22.736" level="INFO">${Ref} = </msg>
+<status status="PASS" starttime="20191020 19:47:21.663" endtime="20191020 19:47:22.737"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:22.737" endtime="20191020 19:47:22.737"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:21.360" endtime="20191020 19:47:22.737"></status>
+</kw>
+<kw name="${i} = 90" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:22.737" endtime="20191020 19:47:23.035"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:24.038" level="INFO">${Ref} = 19050106</msg>
+<status status="PASS" starttime="20191020 19:47:23.035" endtime="20191020 19:47:24.039"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:24.039" endtime="20191020 19:47:24.039"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:22.737" endtime="20191020 19:47:24.039"></status>
+</kw>
+<kw name="${i} = 91" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:24.039" endtime="20191020 19:47:24.327"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:24.884" level="INFO">${Ref} = 19050514</msg>
+<status status="PASS" starttime="20191020 19:47:24.328" endtime="20191020 19:47:24.884"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:24.884" endtime="20191020 19:47:24.884"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:24.039" endtime="20191020 19:47:24.884"></status>
+</kw>
+<kw name="${i} = 92" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:24.884" endtime="20191020 19:47:25.177"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:26.432" level="INFO">${Ref} = 19060532</msg>
+<status status="PASS" starttime="20191020 19:47:25.178" endtime="20191020 19:47:26.433"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:26.433" endtime="20191020 19:47:26.433"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:24.884" endtime="20191020 19:47:26.433"></status>
+</kw>
+<kw name="${i} = 93" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:26.433" endtime="20191020 19:47:26.730"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:27.097" level="INFO">${Ref} = 19060845</msg>
+<status status="PASS" starttime="20191020 19:47:26.730" endtime="20191020 19:47:27.097"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:27.097" endtime="20191020 19:47:27.097"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:26.433" endtime="20191020 19:47:27.097"></status>
+</kw>
+<kw name="${i} = 94" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:27.097" endtime="20191020 19:47:27.392"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:28.779" level="INFO">${Ref} = 19070532</msg>
+<status status="PASS" starttime="20191020 19:47:27.392" endtime="20191020 19:47:28.779"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:28.779" endtime="20191020 19:47:28.779"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:27.097" endtime="20191020 19:47:28.779"></status>
+</kw>
+<kw name="${i} = 95" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:28.779" endtime="20191020 19:47:29.061"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:30.304" level="INFO">${Ref} = 19070581</msg>
+<status status="PASS" starttime="20191020 19:47:29.061" endtime="20191020 19:47:30.304"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:30.304" endtime="20191020 19:47:30.304"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:28.779" endtime="20191020 19:47:30.304"></status>
+</kw>
+<kw name="${i} = 96" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:30.305" endtime="20191020 19:47:30.592"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:31.130" level="INFO">${Ref} = 19070611</msg>
+<status status="PASS" starttime="20191020 19:47:30.592" endtime="20191020 19:47:31.130"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:31.130" endtime="20191020 19:47:31.130"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:30.304" endtime="20191020 19:47:31.130"></status>
+</kw>
+<kw name="${i} = 97" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:31.131" endtime="20191020 19:47:31.425"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:32.736" level="INFO">${Ref} = </msg>
+<status status="PASS" starttime="20191020 19:47:31.425" endtime="20191020 19:47:32.736"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:32.736" endtime="20191020 19:47:32.737"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:31.130" endtime="20191020 19:47:32.737"></status>
+</kw>
+<kw name="${i} = 98" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:32.737" endtime="20191020 19:47:33.025"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:33.422" level="INFO">${Ref} = 19070688</msg>
+<status status="PASS" starttime="20191020 19:47:33.025" endtime="20191020 19:47:33.422"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:33.422" endtime="20191020 19:47:33.423"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:32.737" endtime="20191020 19:47:33.423"></status>
+</kw>
+<kw name="${i} = 99" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:33.423" endtime="20191020 19:47:33.706"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<assign>
+<var>${Ref}</var>
+</assign>
+<msg timestamp="20191020 19:47:34.695" level="INFO">${Ref} = 19070816</msg>
+<status status="PASS" starttime="20191020 19:47:33.706" endtime="20191020 19:47:34.695"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${rowList}</arg>
+<arg>${Ref}s</arg>
+</arguments>
+<status status="PASS" starttime="20191020 19:47:34.695" endtime="20191020 19:47:34.696"></status>
+</kw>
+<status status="PASS" starttime="20191020 19:47:33.423" endtime="20191020 19:47:34.696"></status>
+</kw>
+<kw name="${i} = 100" type="foritem">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>(//div[@data-automationid='DetailsRowFields'])[${i+1}]/div[@aria-colindex='2']</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191020 19:47:45.095" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191020 19:47:44.733" endtime="20191020 19:47:45.096"></status>
+</kw>
+<msg timestamp="20191020 19:47:45.137" level="FAIL">Element with locator '(//div[@data-automationid='DetailsRowFields'])[101]/div[@aria-colindex='2']' not found.</msg>
+<status status="FAIL" starttime="20191020 19:47:34.696" endtime="20191020 19:47:45.137"></status>
+</kw>
+<status status="FAIL" starttime="20191020 19:47:34.696" endtime="20191020 19:47:45.137"></status>
+</kw>
+<status status="FAIL" starttime="20191020 19:46:45.846" endtime="20191020 19:47:45.137"></status>
+</kw>
+<status status="FAIL" starttime="20191020 19:46:44.455" endtime="20191020 19:47:45.138" critical="yes">Element with locator '(//div[@data-automationid='DetailsRowFields'])[101]/div[@aria-colindex='2']' not found.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20191020 19:47:45.149" endtime="20191020 19:47:47.265"></status>
+</kw>
+<status status="FAIL" starttime="20191020 19:46:15.597" endtime="20191020 19:47:47.266"></status>
+</suite>
+<status status="FAIL" starttime="20191020 19:46:15.570" endtime="20191020 19:47:47.294"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="API.test">API.test</stat>
+<stat pass="1" fail="1" id="s1-s1" name="GetDossierList">API.test.GetDossierList</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
