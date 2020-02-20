@@ -1,0 +1,52 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  name: Azure Pipelines
+steps:
+- task: UsePythonVersion@0
+  displayName: 'Use Python 3.x'
+
+- script: 'python -m pip install --upgrade pip && pip install -r requirements.txt'
+  displayName: 'Install dependencies'
+
+- script: 'robot -x xreport.xml  Google.robot '
+  displayName: pytest
+
+- task: CopyFiles@2
+  displayName: 'Copy Files'
+  inputs:
+    SourceFolder: '$(agent.builddirectory)'
+    Contents: |
+     **\*.html
+     **\output.xml
+    TargetFolder: '$(Common.TestResultsDirectory)'
+    CleanTargetFolder: true
+    OverWrite: true
+    flattenFolders: true
+  condition: succeededOrFailed()
+
+- task: ArchiveFiles@2
+  displayName: Archive
+  inputs:
+    rootFolderOrFile: '$(Common.TestResultsDirectory)'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Robot_TestResult_$(Build.BuildId).zip'
+  condition: succeededOrFailed()
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results'
+  inputs:
+    testResultsFormat: XUnit
+    testResultsFiles: '**\xreport.xml'
+    searchFolder: '$(agent.builddirectory)'
+    mergeTestResults: true
+  condition: succeededOrFailed()
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  condition: succeededOrFailed()
